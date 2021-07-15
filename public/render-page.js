@@ -3810,6 +3810,215 @@ function useScrollRestoration(identifier) {
 
 /***/ }),
 
+/***/ "./src/styles/GlobalStyle.ts":
+/*!***********************************!*\
+  !*** ./src/styles/GlobalStyle.ts ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _reset__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./reset */ "./src/styles/reset.ts");
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,styled_components__WEBPACK_IMPORTED_MODULE_1__.createGlobalStyle)(["", " html{font-size:16px;scroll-behavior:smooth;}body{font-family:", ";color:", ";}"], _reset__WEBPACK_IMPORTED_MODULE_0__.default, ({
+  theme
+}) => theme.typography.fonts, ({
+  theme
+}) => theme.color.onLight.lowEmphasis));
+
+/***/ }),
+
+/***/ "./src/styles/reset.ts":
+/*!*****************************!*\
+  !*** ./src/styles/reset.ts ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+
+const reset = (0,styled_components__WEBPACK_IMPORTED_MODULE_0__.css)(["html{box-sizing:border-box;}*,*:before,*:after{box-sizing:inherit;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{min-height:100vh;line-height:1.4;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}button{display:flex;border:none;margin:0;padding:0;font:inherit;color:inherit;background-color:inherit;outline:none;cursor:pointer;}a:not([class]){text-decoration-skip-ink:auto;}img{display:block;max-width:100%;}"]);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (reset);
+
+/***/ }),
+
+/***/ "./src/styles/theme/index.tsx":
+/*!************************************!*\
+  !*** ./src/styles/theme/index.tsx ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const light = {
+  color: {
+    primary: {
+      80: '#FF3674',
+      50: '#FF84a7',
+      20: '#FFCED8'
+    },
+    secondary: {
+      80: '#4C69D7',
+      50: '#7E9AFE',
+      20: '#C1CEFF'
+    },
+    tertiary: {
+      black: '#000000',
+      white: '#FFFFFF',
+      light: '#4F5368',
+      dark: '#262B3D',
+      background: '#F9F9F9'
+    },
+    onLight: {
+      highEmphasis: 'rgba(38, 43, 61, 0.9)',
+      mediumEmphasis: 'rgba(38, 43, 61, 0.7)',
+      lowEmphasis: 'rgba(38, 43, 61, 0.35)',
+      placeholder: 'rgba(38, 43, 61, 0.17)',
+      divider: 'rgba(33, 33, 33, 0.08)'
+    },
+    onDark: {
+      highEmphasis: '#FFFFFF',
+      mediumEmphasis: 'rgba(255, 255, 255, 0.7)',
+      lowEmphasis: 'rgba(255, 255, 255, 0.4)',
+      whiteOverlay: 'rgba(255, 255, 255, 0.12)',
+      divider: 'rgba(255, 255, 255, 0.12)'
+    },
+    miscellaneous: {
+      error: '#ED5454',
+      confirm: '#36A879',
+      selected: {
+        primary: 'rgba(255, 54, 116, 0.15)',
+        secondary: 'rgba(69, 99, 215, 0.1)'
+      }
+    },
+    additional: {
+      red: '#EF5350',
+      purple: '#AB47BC',
+      indigo: '#5C6BC0',
+      blue: '#29B6F6',
+      teal: '#26A69A',
+      green: '#9CCC65',
+      yellow: '#FFEE58',
+      orange: '#FFA726'
+    }
+  }
+};
+const mainTheme = {
+  typography: {
+    fonts: '"LatoRegular", "-apple-system", "Helvetica Neue", "Arial", sans-serif',
+    h2: {
+      fontFamily: 'LatoRegular',
+      fontSize: '3.75em',
+      fontWeight: '400',
+      lineHeight: '1.2',
+      letterSpacing: '-0.03125em'
+    },
+    h3: {
+      fontFamily: 'LatoSemibold',
+      fontSize: '3.5em',
+      fontWeight: '600',
+      lineHeight: '1.16666',
+      letterSpacing: '0'
+    },
+    h4: {
+      fontFamily: 'LatoMedium',
+      fontSize: '2.125em',
+      fontWeight: '500',
+      lineHeight: '1.1765',
+      letterSpacing: '0.015625em'
+    },
+    h5: {
+      fontFamily: 'LatoSemibold',
+      fontSize: '1.5em',
+      fontWeight: '600',
+      lineHeight: '1.5'
+    },
+    h6: {
+      fontFamily: 'LatoMedium',
+      fontSize: '1.25em',
+      fontWeight: '500',
+      letterSpacing: '0.015625em',
+      lineHeight: '1.2'
+    },
+    subtitle1: {
+      fontFamily: 'LatoSemibold',
+      fontSize: '1em',
+      fontWeight: '600',
+      letterSpacing: '0.009375em',
+      lineHeight: '1.5'
+    },
+    subtitle2: {
+      fontFamily: 'LatoSemibold',
+      fontSize: '0.875em',
+      fontWeight: '600',
+      letterSpacing: '0.00625em',
+      lineHeight: '1.43'
+    },
+    body1: {
+      fontFamily: 'LatoRegular',
+      fontSize: '1em',
+      fontWeight: '400',
+      letterSpacing: '0.015625em',
+      lineHeight: '1.5'
+    },
+    body2: {
+      fontFamily: 'LatoRegular',
+      fontSize: '0.875em',
+      fontWeight: '400',
+      letterSpacing: '0.015625em',
+      lineHeight: '1.43'
+    },
+    button: {
+      fontFamily: 'LatoSemibold',
+      fontSize: '0.875em',
+      fontWeight: '600',
+      letterSpacing: '0.078125em',
+      lineHeight: '1.14',
+      textTransform: 'uppercase'
+    },
+    caption: {
+      fontFamily: 'LatoMedium',
+      fontSize: '0.75em',
+      fontWeight: '500',
+      letterSpacing: '0.025em',
+      lineHeight: '1.33'
+    },
+    overline: {
+      fontFamily: 'LatoSemibold',
+      fontSize: '0.625em',
+      fontWeight: '600',
+      letterSpacing: '0.125em',
+      lineHeight: '1.6'
+    }
+  },
+  shadow: {
+    low: '1px 3px 24px 1px rgba(38, 43, 61, 0.06)',
+    medium: '1px 4px 24px 1px rgba(38, 43, 61, 0.1)',
+    high: '1px 5px 24px 1px rgba(38, 43, 61, 0.16)',
+    extremelyHigh: '1px 5px 24px 1px rgba(38, 43, 61, 0.32)',
+    pinkHigh: '0px 8px 24px rgba(38, 43, 61, 0.1), 1px 4px 15px rgba(255, 0, 108, 0.16)',
+    blueHigh: '0px 8px 24px rgba(38, 43, 61, 0.1), 1px 4px 24px rgba(76, 105, 215, 0.16)'
+  }
+};
+const theme = { ...mainTheme,
+  ...light
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (theme);
+
+/***/ }),
+
 /***/ "./.cache/api-runner-ssr.js":
 /*!**********************************!*\
   !*** ./.cache/api-runner-ssr.js ***!
@@ -3870,6 +4079,12 @@ var plugins = [{
     "crossOrigin": "anonymous",
     "include_favicon": true,
     "cacheDigest": "53aa06cf17e4239d0dba6ffd09854e02"
+  }
+}, {
+  name: 'default-site-plugin',
+  plugin: __webpack_require__(/*! ./gatsby-ssr */ "./gatsby-ssr.js"),
+  options: {
+    "plugins": []
   }
 }];
 /* global plugins */
@@ -5308,6 +5523,55 @@ function stripPrefix(str, prefix = ``) {
 
   return str;
 }
+
+/***/ }),
+
+/***/ "./gatsby-root-wrapper.js":
+/*!********************************!*\
+  !*** ./gatsby-root-wrapper.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "wrapRootElement": () => (/* binding */ wrapRootElement)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _src_styles_GlobalStyle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./src/styles/GlobalStyle */ "./src/styles/GlobalStyle.ts");
+/* harmony import */ var _src_styles_theme__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./src/styles/theme */ "./src/styles/theme/index.tsx");
+/*
+ * Add global component to the project
+ * This code is imported in gatsby-browser.js and gatsby-srr.js, just to keep things DRY
+ */
+
+
+
+
+const wrapRootElement = ({
+  element
+}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(styled_components__WEBPACK_IMPORTED_MODULE_3__.ThemeProvider, {
+  theme: _src_styles_theme__WEBPACK_IMPORTED_MODULE_2__.default
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_src_styles_GlobalStyle__WEBPACK_IMPORTED_MODULE_1__.default, null), element);
+
+/***/ }),
+
+/***/ "./gatsby-ssr.js":
+/*!***********************!*\
+  !*** ./gatsby-ssr.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "wrapRootElement": () => (/* binding */ wrapRootElement)
+/* harmony export */ });
+/* harmony import */ var _gatsby_root_wrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gatsby-root-wrapper */ "./gatsby-root-wrapper.js");
+
+const wrapRootElement = _gatsby_root_wrapper__WEBPACK_IMPORTED_MODULE_0__.wrapRootElement;
 
 /***/ }),
 

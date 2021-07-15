@@ -1,54 +1,31 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+Gatsby starter project ready to be plug to a CMS
 
-## 🚀 Quick start
+---
 
-1.  **Create a Gatsby site.**
+## Commandes
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+Run the local server and start developing
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+    gatsby develop
 
-2.  **Start developing.**
+## Theming
 
-    Navigate into your new site’s directory and start it up.
+### Fonts
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+To add custom fonts from the web you have to follow those guidelines -> [Using web font](https://www.gatsbyjs.com/docs/how-to/styling/using-web-fonts/)
 
-3.  **Open the code and start customizing!**
+If you want to use local font you have to add the font with `@font-face` in `GlobalStyle.ts`
 
-    Your site is now running at http://localhost:8000!
+You then have to declare it/them in `theme/index.ts` to be able to use it with the theme.
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+Basic typography components are already implemented, feel free to modify to suit your needs.
 
-4.  **Learn more**
+**Learn more**
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+-   [Gatsby Documentation](https://www.gatsbyjs.com/docs/)
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+-   [Gatsby Plugins](https://www.gatsbyjs.com/plugins)
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+-   [Gatsby API Reference](https://www.gatsbyjs.com/docs/api-reference)
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+-   [Styled-components documentation](https://styled-components.com/docs)
