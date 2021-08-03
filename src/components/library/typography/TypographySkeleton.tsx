@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../../../styles/theme';
-import { shimmerDark, shimmer as shimmerLight } from '../../../styles/utils/shimmer';
+import theme from 'styles/theme';
+import { shimmerDark, shimmer as shimmerLight } from 'styles/utils/shimmer';
 
 type TypographySkeletonProps = {
     className?: string;
