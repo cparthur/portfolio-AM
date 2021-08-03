@@ -1,3 +1,5 @@
-import { wrapRootElement as wrap } from './gatsby-root-wrapper';
+import { wrapRootElement as wrapRoot } from './src/gatsbyRootWrapper';
+import { wrapPageElement as wrapPage } from './src/gatsbyPageWrapper';
 
-export const wrapRootElement = wrap;
+export const wrapRootElement = wrapRoot;
+export const wrapPageElement = wrapPage;

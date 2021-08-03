@@ -1,16 +1,9 @@
 import * as React from 'react';
 
-const pageStyles = {
-    padding: 96,
-    fontFamily: '-apple-system, Roboto, sans-serif, serif',
-};
+import HomePage from 'components/pages/HomePage';
 
-const IndexPage = () => {
-    return (
-        <main style={pageStyles}>
-            <div>GATSBY CMS BOILERPLATE</div>
-        </main>
-    );
+const IndexPage: React.FC = () => {
+    return <HomePage />;
 };
 
 export default IndexPage;
