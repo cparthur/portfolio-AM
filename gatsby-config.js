@@ -1,28 +1,34 @@
 module.exports = {
-  siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "gatsby-CMS-boilerplate",
-  },
-  plugins: [
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        icon: "src/images/icon.png",
-      },
+    siteMetadata: {
+        title: 'gatsby-CMS-boilerplate',
+        description: 'your site description',
+        siteUrl: 'https://www.yourdomain.tld',
+        keywords: ['gatsby', 'starter', 'any', 'thing'],
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "./src/images/",
-      },
-      __key: "images",
-    },
-  ],
+    plugins: [
+        'gatsby-plugin-styled-components',
+        'gatsby-plugin-image',
+        'gatsby-plugin-react-helmet',
+        'gatsby-plugin-sitemap',
+        {
+            resolve: 'gatsby-plugin-manifest',
+            options: {
+                icon: 'src/images/icon.png',
+            },
+        },
+        'gatsby-plugin-sharp',
+        'gatsby-transformer-sharp',
+        {
+            resolve: `gatsby-plugin-alias-imports`,
+            options: {
+                alias: {
+                    src: 'src',
+                    components: 'src/components',
+                    library: 'src/components/library',
+                    styles: 'src/styles',
+                },
+                extensions: [],
+            },
+        },
+    ],
 };
