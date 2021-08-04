@@ -7,4 +7,5 @@
         "stylelint-config-styled-components",
         "stylelint-config-prettier"
     ],
+    "syntax": "scss"
 }

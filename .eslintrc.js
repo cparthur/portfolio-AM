@@ -1,30 +1,22 @@
 module.exports = {
+    plugins: ['@typescript-eslint'],
+    extends: [
+        'airbnb-typescript',
+        'airbnb/hooks',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:react/recommended',
+        'plugin:import/typescript',
+        'prettier',
+    ],
     root: true,
-    parser: '@typescript-eslint/parser',
-    parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-            jsx: true,
-        },
-    },
     env: {
         browser: true,
         node: true,
+        amd: true,
     },
-    plugins: ['@typescript-eslint', 'import', 'react', 'react-hooks'],
-    extends: [
-        'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:import/typescript',
-        'plugin:react/recommended',
-        'plugin:react-hooks/recommended',
-        'prettier',
-    ],
-    rules: {
-        '@typescript-eslint/explicit-module-boundary-types': 'off',
-        'import/prefer-default-export': 'off',
-        'react/prop-types': 'off',
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        project: './tsconfig.json',
     },
     settings: {
         'import/resolver': {
@@ -38,5 +30,12 @@ module.exports = {
         react: {
             version: 'detect',
         },
+    },
+    rules: {
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
+        'import/prefer-default-export': 'off',
+        'react/prop-types': 0,
+        'react/jsx-indent': ['error', 4],
+        'no-nested-ternary': 'off',
     },
 };
