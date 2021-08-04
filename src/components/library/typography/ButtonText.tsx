@@ -8,14 +8,6 @@ type ButtonProps = {
     className?: string;
 };
 
-const ButtonText: React.FC<TruncateTextProps & ButtonProps> = ({ truncateLines, className, children }) => {
-    return (
-        <StyledButtonText truncateLines={truncateLines} className={`lib-Typography lib-ButtonText ${className}`}>
-            {children}
-        </StyledButtonText>
-    );
-};
-
 const StyledButtonText = styled.span<TruncateTextProps>`
     font-family: ${theme.typography.button.fontFamily};
     font-size: ${theme.typography.button.fontSize};
@@ -26,5 +18,11 @@ const StyledButtonText = styled.span<TruncateTextProps>`
 
     ${({ truncateLines }) => (truncateLines === 1 ? truncateOneLineStyles : truncateMultipleLinesStyles(truncateLines))}
 `;
+
+const ButtonText: React.FC<TruncateTextProps & ButtonProps> = ({ truncateLines, className, children }) => (
+    <StyledButtonText truncateLines={truncateLines} className={`lib-Typography lib-ButtonText ${className}`}>
+        {children}
+    </StyledButtonText>
+);
 
 export default ButtonText;

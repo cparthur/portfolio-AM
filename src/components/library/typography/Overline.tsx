@@ -8,14 +8,6 @@ type OverlineProps = {
     className?: string;
 };
 
-const Overline: React.FC<TruncateTextProps & OverlineProps> = ({ truncateLines, className, children }) => {
-    return (
-        <StyledOverline truncateLines={truncateLines} className={`lib-Typography lib-Overline ${className}`}>
-            {children}
-        </StyledOverline>
-    );
-};
-
 const StyledOverline = styled.p<TruncateTextProps>`
     font-family: ${theme.typography.overline.fontFamily};
     font-size: ${theme.typography.overline.fontSize};
@@ -26,5 +18,11 @@ const StyledOverline = styled.p<TruncateTextProps>`
 
     ${({ truncateLines }) => (truncateLines === 1 ? truncateOneLineStyles : truncateMultipleLinesStyles(truncateLines))}
 `;
+
+const Overline: React.FC<TruncateTextProps & OverlineProps> = ({ truncateLines, className, children }) => (
+    <StyledOverline truncateLines={truncateLines} className={`lib-Typography lib-Overline ${className}`}>
+        {children}
+    </StyledOverline>
+);
 
 export default Overline;

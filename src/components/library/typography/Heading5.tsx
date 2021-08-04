@@ -8,14 +8,6 @@ type Heading5Props = {
     className?: string;
 };
 
-const Heading5: React.FC<TruncateTextProps & Heading5Props> = ({ truncateLines, className, children }) => {
-    return (
-        <StyledHeading5 truncateLines={truncateLines} className={`lib-Typography lib-Heading5 ${className}`}>
-            {children}
-        </StyledHeading5>
-    );
-};
-
 const StyledHeading5 = styled.h5<TruncateTextProps>`
     font-family: ${theme.typography.h5.fontFamily};
     font-size: ${theme.typography.h5.fontSize};
@@ -24,5 +16,11 @@ const StyledHeading5 = styled.h5<TruncateTextProps>`
 
     ${({ truncateLines }) => (truncateLines === 1 ? truncateOneLineStyles : truncateMultipleLinesStyles(truncateLines))}
 `;
+
+const Heading5: React.FC<TruncateTextProps & Heading5Props> = ({ truncateLines, className, children }) => (
+    <StyledHeading5 truncateLines={truncateLines} className={`lib-Typography lib-Heading5 ${className}`}>
+        {children}
+    </StyledHeading5>
+);
 
 export default Heading5;

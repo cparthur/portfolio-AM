@@ -17,12 +17,10 @@ const StyledHeading4 = styled.h4<TruncateTextProps>`
     ${({ truncateLines }) => (truncateLines === 1 ? truncateOneLineStyles : truncateMultipleLinesStyles(truncateLines))}
 `;
 
-const Heading4: React.FC<TruncateTextProps & Heading4Props> = ({ truncateLines, className, children }) => {
-    return (
-        <StyledHeading4 truncateLines={truncateLines} className={`lib-Typography lib-Heading4 ${className}`}>
-            {children}
-        </StyledHeading4>
-    );
-};
+const Heading4: React.FC<TruncateTextProps & Heading4Props> = ({ truncateLines, className, children }) => (
+    <StyledHeading4 truncateLines={truncateLines} className={`lib-Typography lib-Heading4 ${className}`}>
+        {children}
+    </StyledHeading4>
+);
 
 export default Heading4;

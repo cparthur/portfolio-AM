@@ -8,14 +8,6 @@ type Subtitle1Props = {
     className?: string;
 };
 
-const Subtitle1: React.FC<TruncateTextProps & Subtitle1Props> = ({ truncateLines, className, children }) => {
-    return (
-        <StyledSubtitle1 truncateLines={truncateLines} className={`lib-Typography lib-Subtitle1 ${className}`}>
-            {children}
-        </StyledSubtitle1>
-    );
-};
-
 const StyledSubtitle1 = styled.p<TruncateTextProps>`
     font-family: ${theme.typography.subtitle1.fontFamily};
     font-size: ${theme.typography.subtitle1.fontSize};
@@ -25,5 +17,11 @@ const StyledSubtitle1 = styled.p<TruncateTextProps>`
 
     ${({ truncateLines }) => (truncateLines === 1 ? truncateOneLineStyles : truncateMultipleLinesStyles(truncateLines))}
 `;
+
+const Subtitle1: React.FC<TruncateTextProps & Subtitle1Props> = ({ truncateLines, className, children }) => (
+    <StyledSubtitle1 truncateLines={truncateLines} className={`lib-Typography lib-Subtitle1 ${className}`}>
+        {children}
+    </StyledSubtitle1>
+);
 
 export default Subtitle1;

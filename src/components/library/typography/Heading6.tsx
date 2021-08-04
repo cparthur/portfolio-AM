@@ -8,14 +8,6 @@ type Heading6Props = {
     className?: string;
 };
 
-const Heading6: React.FC<TruncateTextProps & Heading6Props> = ({ truncateLines, className, children }) => {
-    return (
-        <StyledHeading6 truncateLines={truncateLines} className={`lib-Typography lib-Heading6 ${className}`}>
-            {children}
-        </StyledHeading6>
-    );
-};
-
 const StyledHeading6 = styled.h6<TruncateTextProps>`
     font-family: ${theme.typography.h6.fontFamily};
     font-size: ${theme.typography.h6.fontSize};
@@ -25,5 +17,11 @@ const StyledHeading6 = styled.h6<TruncateTextProps>`
 
     ${({ truncateLines }) => (truncateLines === 1 ? truncateOneLineStyles : truncateMultipleLinesStyles(truncateLines))}
 `;
+
+const Heading6: React.FC<TruncateTextProps & Heading6Props> = ({ truncateLines, className, children }) => (
+    <StyledHeading6 truncateLines={truncateLines} className={`lib-Typography lib-Heading6 ${className}`}>
+        {children}
+    </StyledHeading6>
+);
 
 export default Heading6;

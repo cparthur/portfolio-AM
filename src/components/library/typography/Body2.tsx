@@ -8,14 +8,6 @@ type Body2Props = {
     className?: string;
 };
 
-const Body2: React.FC<TruncateTextProps & Body2Props> = ({ truncateLines, className, children }) => {
-    return (
-        <StyledBody2 truncateLines={truncateLines} className={`lib-Typography lib-Body2 ${className}`}>
-            {children}
-        </StyledBody2>
-    );
-};
-
 const StyledBody2 = styled.p<TruncateTextProps>`
     font-family: ${theme.typography.body2.fontFamily};
     font-size: ${theme.typography.body2.fontSize};
@@ -25,5 +17,11 @@ const StyledBody2 = styled.p<TruncateTextProps>`
 
     ${({ truncateLines }) => (truncateLines === 1 ? truncateOneLineStyles : truncateMultipleLinesStyles(truncateLines))}
 `;
+
+const Body2: React.FC<TruncateTextProps & Body2Props> = ({ truncateLines, className, children }) => (
+    <StyledBody2 truncateLines={truncateLines} className={`lib-Typography lib-Body2 ${className}`}>
+        {children}
+    </StyledBody2>
+);
 
 export default Body2;

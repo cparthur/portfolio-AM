@@ -11,12 +11,10 @@ type LayoutProps = {
     pageProps: PageProps;
 };
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-    return (
-        <>
-            <DefaultLayout>{children}</DefaultLayout>
-        </>
-    );
-};
+const Layout: React.FC<LayoutProps> = ({ children }) => (
+    <>
+        <DefaultLayout>{children}</DefaultLayout>
+    </>
+);
 
 export default Layout;
