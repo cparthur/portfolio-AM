@@ -12,7 +12,7 @@
     "start": "gatsby develop",
     "lint": "yarn lint:ts && yarn lint:css && yarn lint:prettier",
     "lint:ts": "eslint . --ext .js --ext .ts --ext .tsx && tsc --noEmit",
-    "lint:css": "stylelint './src/**/*.{js,ts}'",
+    "lint:css": "stylelint './src/**/*.{js,ts,tsx}'",
     "lint:prettier": "prettier --check './src/**/*.{js,ts,tsx}'",
     "fix": "yarn fix:ts && yarn fix:prettier",
     "fix:ts": "yarn lint:ts --fix",
