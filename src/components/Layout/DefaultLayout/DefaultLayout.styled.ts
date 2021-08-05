@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledDefaultLayout = styled.div`
+export const DefaultLayoutContainer = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;

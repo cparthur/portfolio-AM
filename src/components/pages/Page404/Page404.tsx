@@ -3,10 +3,10 @@ import { Link } from 'gatsby';
 
 import Heading5 from 'library/typography/Heading5';
 import Body1 from 'library/typography/Body1';
-import { StyledPage404 } from './StyledPage404';
+import * as S from './Page404.styled';
 
 const Page404 = () => (
-    <StyledPage404>
+    <S.Page404Container>
         <Heading5>Page not found</Heading5>
         <Body1>
             Sorry{' '}
@@ -17,7 +17,7 @@ const Page404 = () => (
             <br />
             <Link to="/">Go home</Link>.
         </Body1>
-    </StyledPage404>
+    </S.Page404Container>
 );
 
 export default Page404;

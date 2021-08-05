@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledPage404 = styled.main`
+export const Page404Container = styled.main`
     flex-grow: 1;
     display: flex;
     flex-direction: column;

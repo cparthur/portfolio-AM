@@ -2,14 +2,14 @@ import React from 'react';
 
 import DefaultHeader from './DefaultHeader';
 import DefaultFooter from './DefaultFooter';
-import { StyledDefaultLayout } from './StyledDefaultLayout';
+import * as S from './DefaultLayout.styled';
 
 const DefaultLayout: React.FC = ({ children }) => (
-    <StyledDefaultLayout>
+    <S.DefaultLayoutContainer>
         <DefaultHeader />
         {children}
         <DefaultFooter />
-    </StyledDefaultLayout>
+    </S.DefaultLayoutContainer>
 );
 
 export default DefaultLayout;

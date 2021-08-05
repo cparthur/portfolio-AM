@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { StyledDefaultHeader } from './StyledDefaultHeader';
+import * as S from './DefaultHeader.styled';
 
-const DefaultHeader = () => <StyledDefaultHeader>Gatsby starter default header</StyledDefaultHeader>;
+const DefaultHeader = () => <S.DefaultHeaderContainer>Gatsby starter default header</S.DefaultHeaderContainer>;
 
 export default DefaultHeader;

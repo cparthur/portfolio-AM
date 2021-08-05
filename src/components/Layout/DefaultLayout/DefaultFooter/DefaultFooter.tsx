@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { StyledDefaultFooter } from './StyledDefaultFooter';
+import * as S from './DefaultFooter.styled';
 
-const DefaultFooter = () => <StyledDefaultFooter>Gatsby starter footer</StyledDefaultFooter>;
+const DefaultFooter = () => <S.DefaultFooterContainer>Gatsby starter footer</S.DefaultFooterContainer>;
 
 export default DefaultFooter;

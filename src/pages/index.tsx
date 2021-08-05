@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import HomePage from 'components/pages/HomePage';
+import Home from 'components/pages/Home';
 
-const IndexPage: React.FC = () => <HomePage />;
+const IndexPage: React.FC = () => <Home />;
 
 export default IndexPage;
