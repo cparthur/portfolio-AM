@@ -33,6 +33,7 @@ module.exports = {
     },
     rules: {
         '@typescript-eslint/explicit-module-boundary-types': 'off',
+        '@typescript-eslint/no-use-before-define': 'off',
         'import/prefer-default-export': 'off',
         'react/prop-types': 0,
         'react/jsx-indent': ['error', 4],
