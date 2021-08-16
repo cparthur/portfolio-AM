@@ -9,7 +9,8 @@ const Home: React.FC = () => (
     <DefaultLayout>
         <S.HomeContainer>
             <Heading5>GATSBY STARTER</Heading5>
-            <Body1>Typescript, ESlint, Prettier, Styled-components and some basic components</Body1>
+            <Body1>Typescript, ESlint, Prettier, Styled-components and some basic components.</Body1>
+            <Body1>SEO compliant and ready to be delpoyed with Netlify.</Body1>
         </S.HomeContainer>
     </DefaultLayout>
 );
