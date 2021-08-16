@@ -1,9 +1,12 @@
 module.exports = {
     siteMetadata: {
-        title: 'gatsby-CMS-boilerplate',
-        description: 'your site description',
         siteUrl: 'https://www.yourdomain.tld',
-        keywords: ['gatsby', 'starter', 'any', 'thing'],
+        title: 'Arthur Molinos Gatsby boilerplate',
+        titleTemplate: '%s · Gatsby Starter', //Change "Gatsby Starter" by whatever you want to see next to the page title
+        description: 'A typescript & styled-components Gatsby Starter which includes basic theme and UI components',
+        logo: '/images/logo-1024.png',
+        author: 'Arthur Molinos',
+        siteLanguage: 'en',
     },
     plugins: [
         'gatsby-plugin-styled-components',

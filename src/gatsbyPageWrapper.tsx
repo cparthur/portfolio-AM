@@ -1,8 +1,11 @@
 import React from 'react';
 import { GatsbyBrowser } from 'gatsby';
 
-import Layout from 'components/Layout';
+import SEO from 'components/SEO';
 
-export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({ element, props }) => (
-    <Layout pageProps={props}>{element}</Layout>
+export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({ element }) => (
+    <>
+        <SEO />
+        {element}
+    </>
 );
