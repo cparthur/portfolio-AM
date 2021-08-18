@@ -8,9 +8,24 @@ import * as S from './Home.styled';
 const Home: React.FC = () => (
     <DefaultLayout>
         <S.HomeContainer>
-            <Heading5>GATSBY STARTER</Heading5>
-            <Body1>Typescript, ESlint, Prettier, Styled-components and some basic components.</Body1>
-            <Body1>SEO compliant and ready to be delpoyed with Netlify.</Body1>
+            <Heading5>Kick start your next front-end project quickly</Heading5>
+            <ul>
+                <li>
+                    <Body1>Typescript, ESlint, Stylelint, Prettier, Styled-components.</Body1>
+                </li>
+                <li>
+                    <Body1>Default layout, responsive breakpoints.</Body1>
+                </li>
+                <li>
+                    <Body1>Theme and basic Typography components.</Body1>
+                </li>
+                <li>
+                    <Body1>SEO compliant</Body1>
+                </li>
+                <li>
+                    <Body1>Ready to be deployed with Netlify.</Body1>
+                </li>
+            </ul>
         </S.HomeContainer>
     </DefaultLayout>
 );
