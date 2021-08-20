@@ -4,13 +4,8 @@
 
 This starter supports [Typescript](https://www.gatsbyjs.com/plugins/gatsby-plugin-typescript/) and [Eslint](https://eslint.org/), [Stylelint](https://stylelint.io/), [Prettier](https://prettier.io/) are setup. It uses [styled-components](https://styled-components.com/) for styles, comes with a basic theme and some UI components to get started.
 <br>
-<br>
 
 ## Commandes
-
----
-
-<br>
 
 `yarn start` or `yarn dev` - run the local server and start developing
 
@@ -25,13 +20,8 @@ This starter supports [Typescript](https://www.gatsbyjs.com/plugins/gatsby-plugi
 
 TODO: `yarn deploy` - automatic deployment to production with Netlify
 <br>
-<br>
 
 ## Theming
-
----
-
-<br>
 
 ### Theme
 
@@ -81,11 +71,8 @@ export const Container = styled.div`
 ```
 
 <br>
-<br>
 
 ## SEO
-
----
 
 [Gatsby SEO component](https://www.gatsbyjs.com/docs/add-seo-component/) is implemented in `src/components/SEO`.<br>
 Modify the `gatsby-config` site-metedata according to your brand and activities. Use `react-helmet` to override metadata in specific pages.<br>
@@ -94,18 +81,14 @@ Sitemap and robots.txt are automatically generated on build.
 TODO: [structured data](https://www.gatsbyjs.com/docs/add-seo-component/)
 
 <br>
-<br>
 
 ## Deployment
-
----
 
 If you want to us Netlify to deploy your web app, make sure to add those [gatsby-plugin-robots-txt](gatsby-plugin-robots-txt) options to not reference your development and preview branches.
 
 <br>
-<br>
 
-## More ressources
+### More ressources
 
 -   [Gatsby Documentation](https://www.gatsbyjs.com/docs/)
 
