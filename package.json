@@ -8,7 +8,7 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "start": "gatsby develop",
     "lint": "yarn lint:ts && yarn lint:css && yarn lint:prettier",
     "lint:ts": "eslint . --ext .js --ext .ts --ext .tsx && tsc --noEmit",
