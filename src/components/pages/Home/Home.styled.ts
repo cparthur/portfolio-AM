@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
+import media from 'styles/media';
+
 export const HomeContainer = styled.main`
     padding: 4rem 2rem;
+
+    ${media.laptop} {
+        padding: 4rem;
+    }
 
     & .lib-Heading5 {
         margin-bottom: 1rem;
