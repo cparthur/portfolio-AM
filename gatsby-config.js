@@ -38,5 +38,6 @@ module.exports = {
                 extensions: [],
             },
         },
+        'gatsby-plugin-netlify',
     ],
 };
