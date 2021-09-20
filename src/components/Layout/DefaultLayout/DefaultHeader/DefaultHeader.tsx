@@ -5,7 +5,7 @@ import * as S from './DefaultHeader.styled';
 
 const DefaultHeader = () => (
     <S.DefaultHeaderContainer>
-        <Heading5>Gatsby starter</Heading5>
+        <Heading5>Arthur Molinos</Heading5>
     </S.DefaultHeaderContainer>
 );
 

@@ -1,31 +1,17 @@
 import React from 'react';
 
-import DefaultLayout from 'components/Layout/DefaultLayout';
+import DefaultLayout from 'components/layout/DefaultLayout';
 import Body1 from 'library/typography/Body1';
 import Heading5 from 'library/typography/Heading5';
+import DefaultProjectList from 'components/projects/projectList/DefaultProjectList';
 import * as S from './Home.styled';
 
 const Home: React.FC = () => (
     <DefaultLayout>
         <S.HomeContainer>
-            <Heading5>Kick start your next front-end project quickly</Heading5>
-            <ul>
-                <li>
-                    <Body1>Typescript, ESlint, Stylelint, Prettier, Styled-components.</Body1>
-                </li>
-                <li>
-                    <Body1>Default layout, responsive breakpoints.</Body1>
-                </li>
-                <li>
-                    <Body1>Theme and basic Typography components.</Body1>
-                </li>
-                <li>
-                    <Body1>SEO compliant</Body1>
-                </li>
-                <li>
-                    <Body1>Ready to be deployed with Netlify.</Body1>
-                </li>
-            </ul>
+            <Heading5>Projects</Heading5>
+            <Body1>Some projects I have done with passionate people.</Body1>
+            <DefaultProjectList />
         </S.HomeContainer>
     </DefaultLayout>
 );

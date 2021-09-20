@@ -14,6 +14,15 @@ module.exports = {
         'gatsby-plugin-image',
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sitemap',
+        'gatsby-plugin-netlify',
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `data`,
+                path: `${__dirname}/src/data/`,
+                ignore: [`**/\.*`], // ignore files starting with a dot
+            },
+        },
         {
             resolve: 'gatsby-plugin-manifest',
             options: {
@@ -24,8 +33,6 @@ module.exports = {
             resolve: 'gatsby-plugin-robots-txt',
             options: {},
         },
-        'gatsby-plugin-sharp',
-        'gatsby-transformer-sharp',
         {
             resolve: `gatsby-plugin-alias-imports`,
             options: {
@@ -38,6 +45,15 @@ module.exports = {
                 extensions: [],
             },
         },
-        'gatsby-plugin-netlify',
+        {
+            resolve: 'gatsby-source-strapi',
+            options: {
+                apiURL: 'http://localhost:1337',
+                collectionTypes: ['project', 'category'],
+                queryLimit: 1000,
+            },
+        },
+        'gatsby-plugin-sharp',
+        'gatsby-transformer-sharp',
     ],
 };

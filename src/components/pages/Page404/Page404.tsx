@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import DefaultLayout from 'components/Layout/DefaultLayout';
+import DefaultLayout from 'components/layout/DefaultLayout';
 import Heading5 from 'library/typography/Heading5';
 import Body1 from 'library/typography/Body1';
 import * as S from './Page404.styled';
