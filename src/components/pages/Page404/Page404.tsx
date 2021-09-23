@@ -2,15 +2,14 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import DefaultLayout from 'components/layout/DefaultLayout';
-import Heading5 from 'library/typography/Heading5';
-import Body1 from 'library/typography/Body1';
+import Typography from 'library/typography/Typography';
 import * as S from './Page404.styled';
 
 const Page404 = () => (
     <DefaultLayout>
         <S.Page404Container>
-            <Heading5>Page not found</Heading5>
-            <Body1>
+            <Typography weight="extrabold">Page not found</Typography>
+            <Typography>
                 Sorry{' '}
                 <span role="img" aria-label="Pensive emoji">
                     😔{' '}
@@ -18,7 +17,7 @@ const Page404 = () => (
                 we couldn’t find what you were looking for.
                 <br />
                 <Link to="/">Go home</Link>.
-            </Body1>
+            </Typography>
         </S.Page404Container>
     </DefaultLayout>
 );

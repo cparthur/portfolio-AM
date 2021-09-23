@@ -1,16 +1,17 @@
 import React from 'react';
 
 import DefaultLayout from 'components/layout/DefaultLayout';
-import Body1 from 'library/typography/Body1';
-import Heading5 from 'library/typography/Heading5';
+import Typography from 'library/typography/Typography';
 import DefaultProjectList from 'components/projects/projectList/DefaultProjectList';
 import * as S from './Home.styled';
 
 const Home: React.FC = () => (
     <DefaultLayout>
         <S.HomeContainer>
-            <Heading5>Projects</Heading5>
-            <Body1>Some projects I have done with passionate people.</Body1>
+            <Typography as="h2" weight="extrabold">
+                Project
+            </Typography>
+            <Typography customWeight={150}>Some projects I have done with passionate people.</Typography>
             <DefaultProjectList />
         </S.HomeContainer>
     </DefaultLayout>

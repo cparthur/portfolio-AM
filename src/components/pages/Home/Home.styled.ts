@@ -9,7 +9,7 @@ export const HomeContainer = styled.main`
         padding: 4rem;
     }
 
-    & .lib-Heading5 {
+    & .lib-Typography {
         margin-bottom: 1rem;
     }
 
