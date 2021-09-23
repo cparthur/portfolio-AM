@@ -13,6 +13,7 @@ export default createGlobalStyle`
     }
     body {
         font-family: ${({ theme }) => theme.typography.fonts};
-        color: ${({ theme }) => theme.color.onLight.highEmphasis};
+        color: ${({ theme }) => theme.color.onBody.highEmphasis};
+        background-color: ${({ theme }) => theme.color.body};
     }
 `;

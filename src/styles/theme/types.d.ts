@@ -2,56 +2,23 @@ import 'styled-components';
 
 declare module 'styled-components' {
     export interface DefaultTheme {
+        theme: string;
         color: {
             primary: {
-                80: string;
-                50: string;
-                20: string;
+                start: string;
+                end?: string;
             };
-            secondary: {
-                80: string;
-                50: string;
-                20: string;
-            };
-            tertiary: {
-                black: string;
-                white: string;
-                light: string;
-                dark: string;
-                background: string;
-            };
-            onLight: {
+            body: string;
+            onBody: {
                 highEmphasis: string;
                 mediumEmphasis: string;
                 lowEmphasis: string;
                 placeholder: string;
-                divider: string;
             };
-            onDark: {
-                highEmphasis: string;
-                mediumEmphasis: string;
-                lowEmphasis: string;
-                whiteOverlay: string;
-                divider: string;
-            };
-            miscellaneous: {
-                error: string;
-                confirm: string;
-                selected: {
-                    primary: string;
-                    secondary: string;
-                };
-            };
-            additional: {
-                red: string;
-                purple: string;
-                indigo: string;
-                blue: string;
-                teal: string;
-                green: string;
-                yellow: string;
-                orange: string;
-            };
+        };
+        shadow: {
+            default: string;
+            large: string;
         };
         typography: {
             fonts: string;
@@ -139,14 +106,6 @@ declare module 'styled-components' {
                 letterSpacing: string;
                 lineHeight: string;
             };
-        };
-        shadow: {
-            low: string;
-            medium: string;
-            high: string;
-            extremelyHigh: string;
-            pinkHigh: string;
-            blueHigh: string;
         };
     }
 }

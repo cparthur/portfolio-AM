@@ -1,56 +1,43 @@
 import { DefaultTheme } from 'styled-components';
 
-const light = {
+const dark = {
+    theme: 'dark',
     color: {
         primary: {
-            80: '#FF3674',
-            50: '#FF84a7',
-            20: '#FFCED8',
+            start: '#26FF97',
         },
-        secondary: {
-            80: '#4C69D7',
-            50: '#7E9AFE',
-            20: '#C1CEFF',
+        body: '#1A1A1A',
+        onBody: {
+            highEmphasis: 'rgba(241, 241, 241, 1)',
+            mediumEmphasis: 'rgba(241, 241, 241, 0.7)',
+            lowEmphasis: 'rgba(241, 241, 241, 0.4)',
+            placeholder: 'rgba(241, 241, 241, 0.2)',
         },
-        tertiary: {
-            black: '#000000',
-            white: '#FFFFFF',
-            light: '#4F5368',
-            dark: '#262B3D',
-            background: '#F9F9F9',
+    },
+    shadow: {
+        default: '0px 0px 16px 0px rgba(38, 255, 151, 0.5)',
+        large: '0px 0px 32px 0px rgba(38, 255, 151, 0.15)',
+    },
+};
+
+const light = {
+    theme: 'light',
+    color: {
+        primary: {
+            start: '#8E9AFF',
+            end: '#CA71EA',
         },
-        onLight: {
-            highEmphasis: 'rgba(38, 43, 61, 0.9)',
-            mediumEmphasis: 'rgba(38, 43, 61, 0.7)',
-            lowEmphasis: 'rgba(38, 43, 61, 0.35)',
-            placeholder: 'rgba(38, 43, 61, 0.17)',
-            divider: 'rgba(33, 33, 33, 0.08)',
+        body: '#FFFFFF',
+        onBody: {
+            highEmphasis: 'rgba(38, 38, 38, 1)',
+            mediumEmphasis: 'rgba(38, 38, 38, 0.7)',
+            lowEmphasis: 'rgba(38, 38, 38, 0.3)',
+            placeholder: 'rgba(38, 38, 38, 0.15)',
         },
-        onDark: {
-            highEmphasis: '#FFFFFF',
-            mediumEmphasis: 'rgba(255, 255, 255, 0.7)',
-            lowEmphasis: 'rgba(255, 255, 255, 0.4)',
-            whiteOverlay: 'rgba(255, 255, 255, 0.12)',
-            divider: 'rgba(255, 255, 255, 0.12)',
-        },
-        miscellaneous: {
-            error: '#ED5454',
-            confirm: '#36A879',
-            selected: {
-                primary: 'rgba(255, 54, 116, 0.15)',
-                secondary: 'rgba(69, 99, 215, 0.1)',
-            },
-        },
-        additional: {
-            red: '#EF5350',
-            purple: '#AB47BC',
-            indigo: '#5C6BC0',
-            blue: '#29B6F6',
-            teal: '#26A69A',
-            green: '#9CCC65',
-            yellow: '#FFEE58',
-            orange: '#FFA726',
-        },
+    },
+    shadow: {
+        default: '0px 0px 16px 0px rgba(142, 154, 255, 0.5)',
+        large: '0px 0px 32px 0px rgba(142, 154, 255, 0.33)',
     },
 };
 
@@ -142,16 +129,8 @@ const mainTheme = {
             lineHeight: '1.6',
         },
     },
-    shadow: {
-        low: '1px 3px 24px 1px rgba(38, 43, 61, 0.06)',
-        medium: '1px 4px 24px 1px rgba(38, 43, 61, 0.1)',
-        high: '1px 5px 24px 1px rgba(38, 43, 61, 0.16)',
-        extremelyHigh: '1px 5px 24px 1px rgba(38, 43, 61, 0.32)',
-        pinkHigh: '0px 8px 24px rgba(38, 43, 61, 0.1), 1px 4px 15px rgba(255, 0, 108, 0.16)',
-        blueHigh: '0px 8px 24px rgba(38, 43, 61, 0.1), 1px 4px 24px rgba(76, 105, 215, 0.16)',
-    },
 };
 
-const theme: DefaultTheme = { ...mainTheme, ...light };
+const theme: DefaultTheme = { ...mainTheme, ...dark };
 
 export default theme;
