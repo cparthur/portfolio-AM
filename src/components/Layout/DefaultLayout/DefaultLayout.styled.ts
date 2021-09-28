@@ -23,7 +23,6 @@ export const DefaultLayoutContainer = styled.div`
     }
 
     ${media.desktop} {
-        max-width: 75rem; /* 1200px */
         margin: 0 auto;
     }
 
