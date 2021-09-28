@@ -6,14 +6,20 @@ import { truncateMultipleLinesStyles, truncateOneLineStyles, TruncateTextProps }
 
 type TypographyProps = {
     className?: string;
-    as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+    as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span' | 'strong';
     weight?: 'light' | 'regular' | 'medium' | 'semibold' | 'bold' | 'extrabold';
     customWeight?: number;
+    highlighted?: boolean;
+    isLink?: boolean;
 };
 
 const StyledTypography = styled.p<TruncateTextProps & TypographyProps>`
     font-family: ${theme.typography.fonts};
     line-height: 1.33;
+
+    & * {
+        display: inline !important;
+    }
 
     ${({ weight }) =>
         (weight === undefined && {
@@ -44,6 +50,16 @@ const StyledTypography = styled.p<TruncateTextProps & TypographyProps>`
             font-weight: ${customWeight};
         `};
 
+    ${({ highlighted }) =>
+        highlighted && {
+            color: theme.color.primary.start,
+        }};
+
+    ${({ isLink }) =>
+        isLink && {
+            textDecoration: 'underline',
+        }};
+
     ${({ truncateLines }) => (truncateLines === 1 ? truncateOneLineStyles : truncateMultipleLinesStyles(truncateLines))}
 `;
 
@@ -54,6 +70,8 @@ const Typography: React.FC<TruncateTextProps & TypographyProps> = ({
     children,
     weight,
     customWeight,
+    isLink,
+    highlighted,
 }) => (
     <StyledTypography
         as={as}
@@ -61,6 +79,8 @@ const Typography: React.FC<TruncateTextProps & TypographyProps> = ({
         className={`lib-Typography ${className}`}
         weight={weight}
         customWeight={customWeight}
+        isLink={isLink}
+        highlighted={highlighted}
     >
         {children}
     </StyledTypography>
