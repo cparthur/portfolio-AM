@@ -1,12 +1,14 @@
 import React from 'react';
 
-import Typography from 'library/typography/Typography';
-
+import LogoDark from 'library/logo/LogoDark';
 import * as S from './DefaultHeader.styled';
 
 const DefaultHeader = () => (
     <S.DefaultHeaderContainer>
-        <Typography weight="extrabold">Arthur Molinos</Typography>
+        <LogoDark />
+        <S.DefaultHeaderMenu>
+            <S.DefaultHeaderMenuItem weight="medium">About</S.DefaultHeaderMenuItem>
+        </S.DefaultHeaderMenu>
     </S.DefaultHeaderContainer>
 );
 

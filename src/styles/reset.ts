@@ -148,6 +148,11 @@ const reset = css`
         cursor: pointer;
     }
 
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
     a:not([class]) {
         text-decoration-skip-ink: auto;
     }

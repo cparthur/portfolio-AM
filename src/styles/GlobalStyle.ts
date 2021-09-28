@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 import InterSubset from '../assets/fonts/Inter-subset.woff2';
 
+import media from './media';
 import reset from './reset';
 
 export default createGlobalStyle`
@@ -22,7 +23,12 @@ export default createGlobalStyle`
     html {
         font-size: 16px;
         scroll-behavior: smooth;
+
+        ${media.infinite} {
+            font-size: 0.7vw;
+        }
     }
+
     body {
         font-family: ${({ theme }) => theme.typography.fonts};
         color: ${({ theme }) => theme.color.onBody.highEmphasis};
