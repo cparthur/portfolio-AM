@@ -1,13 +1,19 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 import LogoDark from 'library/logo/LogoDark';
+import Typography from 'library/typography/Typography';
 import * as S from './DefaultHeader.styled';
 
 const DefaultHeader = () => (
     <S.DefaultHeaderContainer>
-        <LogoDark />
+        <Link to="/">
+            <LogoDark />
+        </Link>
         <S.DefaultHeaderMenu>
-            <S.DefaultHeaderMenuItem weight="medium">About</S.DefaultHeaderMenuItem>
+            <S.DefaultHeaderMenuItem to="/about" activeClassName="header-menu-item-active">
+                <Typography weight="medium">About</Typography>
+            </S.DefaultHeaderMenuItem>
         </S.DefaultHeaderMenu>
     </S.DefaultHeaderContainer>
 );

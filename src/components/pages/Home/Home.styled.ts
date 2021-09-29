@@ -5,9 +5,11 @@ import media from 'styles/media';
 
 export const HomeContainer = styled.main`
     margin: auto 0;
+    padding-top: 2rem;
 
     ${media.tablet} {
         margin: 3rem 0 auto;
+        padding-top: 0.5rem;
     }
 
     ${media.laptopS} {
@@ -15,11 +17,7 @@ export const HomeContainer = styled.main`
     }
 
     ${media.laptopL} {
-        padding-bottom: 14rem;
-    }
-
-    ${media.desktop} {
-        padding-bottom: 16rem;
+        padding-top: 0;
     }
 `;
 

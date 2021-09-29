@@ -7,7 +7,7 @@ import * as S from './Home.styled';
 const Home: React.FC = () => (
     <DefaultLayout>
         <S.HomeContainer>
-            <S.HeyText weight="medium">Hey internets!</S.HeyText>
+            <S.HeyText>Hey internets!</S.HeyText>
             <S.Title forwardedAs="h1">
                 I’m{' '}
                 <Typography as="span" highlighted weight="extrabold">
