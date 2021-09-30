@@ -1,7 +1,7 @@
 import React from 'react';
 
+import DefaultLayout from 'components/Layout/DefaultLayout';
 import Typography from 'library/typography/Typography';
-import DefaultLayout from '../../layout/DefaultLayout';
 import * as S from './Home.styled';
 
 const Home: React.FC = () => (
