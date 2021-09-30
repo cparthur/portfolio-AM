@@ -45,14 +45,6 @@ module.exports = {
                 extensions: [],
             },
         },
-        {
-            resolve: 'gatsby-source-strapi',
-            options: {
-                apiURL: 'http://localhost:1337',
-                collectionTypes: ['project', 'category'],
-                queryLimit: 1000,
-            },
-        },
         'gatsby-plugin-sharp',
         'gatsby-transformer-sharp',
     ],
