@@ -1,10 +1,10 @@
 module.exports = {
     siteMetadata: {
-        siteUrl: 'https://yoursite.com',
-        title: 'Gatsby starter',
+        siteUrl: 'https://www.arthurmolinos.com',
+        title: 'Portfolio',
         titleTemplate: '%s · Arthur Molinos', //Change "Arthur Molinos" by whatever you want to see next to any page title
         description:
-            'A typescript & styled-components Gatsby Starter which includes basic theme and UI components. SEO compliant and ready to be deployed with Netlify',
+            'Product designer and Web developer. I carefully create digital products and experiences that solve people and business needs.',
         logo: '/images/logo-1024.png',
         author: 'Arthur Molinos',
         siteLanguage: 'en',
