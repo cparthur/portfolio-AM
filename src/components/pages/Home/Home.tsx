@@ -2,12 +2,16 @@ import React from 'react';
 
 import DefaultLayout from 'components/Layout/DefaultLayout';
 import Typography from 'library/typography/Typography';
+import Emoji from 'library/icons/Emoji';
 import * as S from './Home.styled';
 
 const Home: React.FC = () => (
     <DefaultLayout>
         <S.HomeContainer>
-            <S.HeyText>Hey internets!</S.HeyText>
+            <S.HeyText>
+                <Typography>Hey internets!</Typography>
+                <Emoji symbol="✌️" label="hey hand" />
+            </S.HeyText>
             <S.Title forwardedAs="h1">
                 I’m{' '}
                 <Typography as="span" highlighted weight="extrabold">

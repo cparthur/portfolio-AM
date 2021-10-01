@@ -21,10 +21,18 @@ export const HomeContainer = styled.main`
     }
 `;
 
-export const HeyText = styled(Typography)`
+export const HeyText = styled.div`
+    display: flex;
     margin-bottom: 1rem;
     font-size: 1.75rem;
-    color: ${({ theme }) => theme.color.onBody.lowEmphasis};
+
+    & .lib-Typography {
+        color: ${({ theme }) => theme.color.onBody.lowEmphasis};
+    }
+
+    & .emoji {
+        margin-left: 0.5rem;
+    }
 
     ${media.desktop} {
         margin-bottom: 1.5rem;
