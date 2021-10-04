@@ -29,12 +29,14 @@ const Home: React.FC = () => (
             </S.Title>
             <S.Separator />
             <S.PositionText>
-                Currently available for freelance projects and designer at{' '}
+                Freelancer - I’m open to new projects. <br />
+                Also building the first skateboarding tech co-op at{' '}
                 <a href="https://skatekrak.com/" target="_blank" rel="noreferrer noopener">
                     <Typography as="span" isLink highlighted>
                         skatekrak
                     </Typography>
                 </a>
+                .
             </S.PositionText>
         </S.HomeContainer>
     </DefaultLayout>

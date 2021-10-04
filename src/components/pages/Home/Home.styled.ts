@@ -70,11 +70,19 @@ export const PositionText = styled(Typography)`
     color: ${({ theme }) => theme.color.onBody.mediumEmphasis};
 
     ${media.tablet} {
-        max-width: 22rem;
+        max-width: 34rem;
     }
 
     ${media.desktop} {
-        max-width: 26rem;
+        max-width: 40rem;
         font-size: 1.25rem;
+    }
+
+    & br {
+        display: none !important;
+
+        ${media.tablet} {
+            display: inline !important;
+        }
     }
 `;
