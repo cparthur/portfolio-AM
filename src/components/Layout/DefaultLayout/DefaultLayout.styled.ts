@@ -9,6 +9,10 @@ export const DefaultLayoutContainer = styled.div`
     min-height: 100vh;
     margin: 0 2rem;
 
+    & * {
+        z-index: 1;
+    }
+
     ${media.tablet} {
         margin: 0 4rem;
     }
