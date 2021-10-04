@@ -33,7 +33,7 @@ export const DefaultLayoutContainer = styled.div`
         top: 20vh;
         height: 90vh;
         width: 100%;
-        z-index: -1;
+        z-index: 0;
 
         & path {
             stroke: ${({ theme }) => theme.color.onBody.placeholder};

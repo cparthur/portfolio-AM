@@ -23,6 +23,7 @@ export default createGlobalStyle`
     html {
         font-size: 16px;
         scroll-behavior: smooth;
+        background-color: ${({ theme }) => theme.color.body};
 
         ${media.infinite} {
             font-size: 0.7vw;
