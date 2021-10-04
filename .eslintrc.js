@@ -37,6 +37,7 @@ module.exports = {
         'import/prefer-default-export': 'off',
         'react/prop-types': 0,
         'react/jsx-indent': ['error', 4],
+        'react/jsx-props-no-spreading': 'off',
         'no-nested-ternary': 'off',
     },
 };

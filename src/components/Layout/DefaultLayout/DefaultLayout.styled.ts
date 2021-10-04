@@ -9,10 +9,6 @@ export const DefaultLayoutContainer = styled.div`
     min-height: 100vh;
     margin: 0 2rem;
 
-    & * {
-        z-index: 1;
-    }
-
     ${media.tablet} {
         margin: 0 4rem;
     }
@@ -37,7 +33,7 @@ export const DefaultLayoutContainer = styled.div`
         top: 20vh;
         height: 90vh;
         width: 100%;
-        z-index: 0;
+        z-index: -1;
 
         & path {
             stroke: ${({ theme }) => theme.color.onBody.placeholder};

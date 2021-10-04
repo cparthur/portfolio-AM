@@ -7,7 +7,7 @@ import * as S from './DefaultHeader.styled';
 
 const DefaultHeader = () => (
     <S.DefaultHeaderContainer>
-        <Link to="/">
+        <Link to="/" id="default-header-home-link">
             <LogoDark />
         </Link>
         <S.DefaultHeaderMenu>

@@ -15,10 +15,15 @@ export const DefaultHeaderContainer = styled.header`
         position: fixed;
         width: 64%; /* This number is correlated to DefaultLayout max-width */
         padding: 5rem 0 4rem;
+        pointer-events: none;
     }
 
     ${media.desktop} {
         padding: 6rem 0 3rem;
+    }
+
+    & #default-header-home-link {
+        pointer-events: initial;
     }
 
     & .logo-dark {
@@ -40,6 +45,7 @@ export const DefaultHeaderContainer = styled.header`
 
 export const DefaultHeaderMenu = styled.nav`
     margin: auto 0 auto auto;
+    pointer-events: initial;
 `;
 
 export const DefaultHeaderMenuItem = styled(Link)`
