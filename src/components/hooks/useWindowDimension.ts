@@ -8,6 +8,12 @@ export const useWindowDimension = () => {
     const isBrowser = typeof window !== 'undefined';
 
     useEffect(() => {
+        if (isBrowser) {
+            setDimension([window.innerWidth, window.innerHeight]);
+        }
+    }, [isBrowser]);
+
+    useEffect(() => {
         const debouncedResizeHandler = debounce(() => {
             setDimension([window.innerWidth, window.innerHeight]);
         }, 100); // 100ms
@@ -15,7 +21,7 @@ export const useWindowDimension = () => {
         window.addEventListener('resize', debouncedResizeHandler);
 
         return () => window.removeEventListener('resize', debouncedResizeHandler);
-    }, [isBrowser]); // Note this empty array. this effect should run only on mount and unmount
+    }, []); // Note this empty array. this effect should run only on mount and unmount
 
     return dimension;
 };
