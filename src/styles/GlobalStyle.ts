@@ -40,7 +40,9 @@ export default createGlobalStyle`
     /* SimpleBar custom properties */
     
     /* Hide native scrollbar */
-    ::-webkit-scrollbar { display: none; }
+    .simplebar-content-wrapper::-webkit-scrollbar {
+        display: none;
+    }
 
     .simplebar-track.simplebar-vertical {
         width: 0.5rem;
