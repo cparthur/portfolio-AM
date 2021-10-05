@@ -38,11 +38,15 @@ export default createGlobalStyle`
     }
 
     /* SimpleBar custom properties */
-    & .simplebar-track.simplebar-vertical {
+    
+    /* Hide native scrollbar */
+    ::-webkit-scrollbar { display: none; }
+
+    .simplebar-track.simplebar-vertical {
         width: 0.5rem;
     }
 
-    & .simplebar-track.simplebar-horizontal {
+    .simplebar-track.simplebar-horizontal {
         height: 0.5rem;
 
         ${media.laptopS} {
@@ -50,11 +54,11 @@ export default createGlobalStyle`
         }
     }
 
-    & .simplebar-scrollbar:before {
+    .simplebar-scrollbar:before {
         background: ${({ theme }) => theme.color.primary.start};
     }
 
-    & .simplebar-scrollbar.simplebar-visible:before {
+    .simplebar-scrollbar.simplebar-visible:before {
         opacity: 0.25;
 
         ${media.laptopS} {
