@@ -35,6 +35,7 @@ export default createGlobalStyle`
         font-family: ${({ theme }) => theme.typography.fonts};
         color: ${({ theme }) => theme.color.onBody.highEmphasis};
         background-color: ${({ theme }) => theme.color.body};
+        overflow: hidden;
     }
 
     /* SimpleBar custom properties */
