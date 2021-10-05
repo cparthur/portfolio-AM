@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import SimpleBar, { Props as SimpleBarProps } from 'simplebar-react';
+
+import { useWindowDimension } from 'components/hooks/useWindowDimension';
 
 type Props = {
     maxHeight?: string;
@@ -11,10 +13,25 @@ const ScrollBar = React.forwardRef<SimpleBar, Props>(({ children, maxHeight, ...
         maxHeight,
     };
 
+    const [width] = useWindowDimension();
+
+    const isMobile = useMemo(() => {
+        if (width >= 1280) {
+            return false;
+        }
+        return true;
+    }, [width]);
+
     return (
-        <SimpleBar style={styles} ref={ref} {...props}>
-            {children}
-        </SimpleBar>
+        <>
+            {isMobile ? (
+                <>{children}</>
+            ) : (
+                <SimpleBar style={styles} ref={ref} {...props}>
+                    {children}
+                </SimpleBar>
+            )}
+        </>
     );
 });
 ScrollBar.displayName = 'ScrollBar';

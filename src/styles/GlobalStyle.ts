@@ -35,16 +35,9 @@ export default createGlobalStyle`
         font-family: ${({ theme }) => theme.typography.fonts};
         color: ${({ theme }) => theme.color.onBody.highEmphasis};
         background-color: ${({ theme }) => theme.color.body};
-        overflow: hidden;
     }
 
     /* SimpleBar custom properties */
-    
-    /* Hide native scrollbar */
-    .simplebar-content-wrapper::-webkit-scrollbar {
-        display: none;
-    }
-
     .simplebar-track.simplebar-vertical {
         width: 0.5rem;
     }
