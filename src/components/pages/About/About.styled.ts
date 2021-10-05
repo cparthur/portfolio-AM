@@ -5,10 +5,12 @@ import media from 'styles/media';
 
 export const AboutContainer = styled.main`
     margin: auto 0;
+    padding-top: 2rem; /* This number is correlated to DefaultLayoutHeader padding-bottom */
 
     ${media.tablet} {
         max-width: 32rem;
         margin: 0 auto auto;
+        padding-top: 1.5rem;
     }
 
     ${media.laptopS} {
