@@ -16,7 +16,7 @@ const ScrollBar = React.forwardRef<SimpleBar, Props>(({ children, maxHeight, ...
     const [width] = useWindowDimension();
 
     const isMobile = useMemo(() => {
-        if (width >= 1280) {
+        if (width !== null && width >= 1280) {
             return false;
         }
         return true;
