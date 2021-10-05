@@ -5,6 +5,8 @@ import debounce from 'components/helpers/debounce';
 export const useWindowDimension = () => {
     const [dimension, setDimension] = useState<[number | null, number | null]>([null, null]);
 
+    const isBrowser = typeof window !== 'undefined';
+
     useEffect(() => {
         const debouncedResizeHandler = debounce(() => {
             setDimension([window.innerWidth, window.innerHeight]);
@@ -13,7 +15,7 @@ export const useWindowDimension = () => {
         window.addEventListener('resize', debouncedResizeHandler);
 
         return () => window.removeEventListener('resize', debouncedResizeHandler);
-    }, []); // Note this empty array. this effect should run only on mount and unmount
+    }, [isBrowser]); // Note this empty array. this effect should run only on mount and unmount
 
     return dimension;
 };
