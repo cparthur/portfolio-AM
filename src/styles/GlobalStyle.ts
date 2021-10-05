@@ -40,10 +40,6 @@ export default createGlobalStyle`
     /* SimpleBar custom properties */
     & .simplebar-track.simplebar-vertical {
         width: 0.5rem;
-
-        ${media.laptopS} {
-            width: 0.75rem;
-        }
     }
 
     & .simplebar-track.simplebar-horizontal {

@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 import media from 'styles/media';
 
-export const DefaultLayoutContainer = styled.div`
-    position: relative;
+export const DefaultLayoutInnerContainer = styled.div`
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0 2rem;
+    z-index: 1;
 
     ${media.tablet} {
         margin: 0 4rem;
@@ -25,6 +25,12 @@ export const DefaultLayoutContainer = styled.div`
     ${media.desktop} {
         margin: 0 auto;
     }
+`;
+
+export const DefaultLayoutContainer = styled.div`
+    position: relative;
+    height: 100vh;
+    width: 100vw;
 
     & #background-vector {
         position: fixed;
@@ -33,7 +39,7 @@ export const DefaultLayoutContainer = styled.div`
         top: 20vh;
         height: 90vh;
         width: 100%;
-        z-index: -1;
+        z-index: 0;
 
         & path {
             stroke: ${({ theme }) => theme.color.onBody.placeholder};

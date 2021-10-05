@@ -7,14 +7,16 @@ import DefaultFooter from './DefaultFooter';
 import * as S from './DefaultLayout.styled';
 
 const DefaultLayout: React.FC = ({ children }) => (
-    <ScrollBar maxHeight="100vh">
-        <S.DefaultLayoutContainer>
-            <BackgroundVector />
-            <DefaultHeader />
-            {children}
-            <DefaultFooter />
-        </S.DefaultLayoutContainer>
-    </ScrollBar>
+    <S.DefaultLayoutContainer>
+        <BackgroundVector />
+        <ScrollBar maxHeight="100vh">
+            <S.DefaultLayoutInnerContainer>
+                <DefaultHeader />
+                {children}
+                <DefaultFooter />
+            </S.DefaultLayoutInnerContainer>
+        </ScrollBar>
+    </S.DefaultLayoutContainer>
 );
 
 export default DefaultLayout;
