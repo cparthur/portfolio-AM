@@ -5,15 +5,9 @@ import debounce from 'components/helpers/debounce';
 export const useWindowDimension = () => {
     const [dimension, setDimension] = useState<[number | null, number | null]>([null, null]);
 
-    const isBrowser = typeof window !== 'undefined';
-
     useEffect(() => {
-        if (isBrowser) {
-            setDimension([window.innerWidth, window.innerHeight]);
-        }
-    }, [isBrowser]);
+        setDimension([window.innerWidth, window.innerHeight]);
 
-    useEffect(() => {
         const debouncedResizeHandler = debounce(() => {
             setDimension([window.innerWidth, window.innerHeight]);
         }, 100); // 100ms
