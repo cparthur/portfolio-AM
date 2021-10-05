@@ -5,7 +5,7 @@ import media from 'styles/media';
 
 export const DefaultHeaderContainer = styled.header`
     display: flex;
-    padding: 2rem 0 2.5rem;
+    padding: 2rem 0;
 
     ${media.tablet} {
         padding: 4rem 0 2.5rem;
@@ -23,18 +23,14 @@ export const DefaultHeaderContainer = styled.header`
     }
 
     & #default-header-home-link {
+        display: flex;
         pointer-events: initial;
     }
 
     & .logo-dark {
-        width: 5rem;
-        height: 5rem;
+        width: 6rem;
+        height: 6rem;
         margin-right: auto;
-
-        ${media.tablet} {
-            width: 6rem;
-            height: 6rem;
-        }
 
         ${media.desktop} {
             width: 7rem;
