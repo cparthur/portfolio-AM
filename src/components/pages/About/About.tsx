@@ -8,16 +8,16 @@ const About: React.FC = () => (
     <DefaultLayout>
         <S.AboutContainer>
             <S.AboutText>
-                I’m truly convinced that design can solve complex problems and algorithms can bring those solutions at
-                large scale in an accessible way. I carefully create digital products and experiences that solve people
-                and business needs. During 6+ years, I’ve crossed many different areas of a digital product lifecycle
-                from graphic design, web design to UI/UX, web engineering and startup development.
+                I’m convinced that design can solve complex problems and algorithms can bring those solutions at large
+                scale in an accessible way. I carefully create digital products and experiences that solve people and
+                business needs. During 6+ years, I’ve crossed many different areas of a digital product lifecycle from
+                graphic design, web design to UI/UX, web engineering and startup development.
                 <br />
                 <br />I bring those expertises all together to help you achieve your goals.
             </S.AboutText>
             <S.AboutSubtitle weight="extrabold">My journey</S.AboutSubtitle>
             <S.AboutText>
-                I’m a former designer who learned to code to bridge the gap between creatives and developers.
+                I’m a designer who learned to code to bridge the gap between creatives and developers.
                 <br />I started my journey at{' '}
                 <a href="https://www.ecv.fr/en/" target="_blank" rel="noreferrer noopener">
                     <Typography as="span" weight="medium" isLink highlighted>
