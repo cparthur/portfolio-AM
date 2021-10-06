@@ -30,7 +30,10 @@ export const DefaultLayoutInnerContainer = styled.div`
 export const DefaultLayoutContainer = styled.div`
     position: relative;
     height: 100vh;
-    width: 100vw;
+
+    ${media.laptop} {
+        overflow: hidden;
+    }
 
     & #background-vector {
         position: fixed;
