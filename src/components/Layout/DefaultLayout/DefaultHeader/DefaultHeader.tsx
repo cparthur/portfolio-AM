@@ -11,7 +11,7 @@ const DefaultHeader = () => (
             <LogoDark />
         </Link>
         <S.DefaultHeaderMenu>
-            <S.DefaultHeaderMenuItem to="/about" activeClassName="header-menu-item-active">
+            <S.DefaultHeaderMenuItem to="/about/" activeClassName="header-menu-item-active">
                 <Typography weight="medium">About</Typography>
             </S.DefaultHeaderMenuItem>
         </S.DefaultHeaderMenu>
