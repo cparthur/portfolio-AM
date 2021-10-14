@@ -4,17 +4,15 @@ import { useTranslation } from 'react-i18next';
 import Typography from 'library/typography/Typography';
 import * as S from './SwitchLang.styled';
 
-type LangTypes = string;
-
 const SwitchLang = () => {
     const { i18n } = useTranslation();
-    const { resolvedLanguage } = i18n;
+    const { language } = i18n;
 
-    const [lang, setLang] = useState<LangTypes>(resolvedLanguage);
+    const [lang, setLang] = useState(language);
 
-    const handleChangeLang = (language: LangTypes) => {
-        setLang(language);
-        i18n.changeLanguage(language);
+    const handleChangeLang = (newLang: string) => {
+        setLang(newLang);
+        i18n.changeLanguage(newLang);
     };
 
     return (
