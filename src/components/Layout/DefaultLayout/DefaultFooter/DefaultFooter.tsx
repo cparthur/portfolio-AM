@@ -7,7 +7,7 @@ import * as S from './DefaultFooter.styled';
 const DefaultFooter = () => (
     <S.DefaultFooterContainer>
         <DefaultFooterSocials />
-        {/* <DefaultFooterSettings /> */}
+        <DefaultFooterSettings />
     </S.DefaultFooterContainer>
 );
 
