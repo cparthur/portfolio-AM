@@ -9,6 +9,8 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyle from 'styles/GlobalStyle';
 import theme from 'styles/theme';
 
+import './i18n/i18n';
+
 export const wrapRootElement: GatsbyBrowser['wrapRootElement'] = ({ element }) => (
     <ThemeProvider theme={theme}>
         <GlobalStyle />
