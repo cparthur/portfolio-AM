@@ -11,6 +11,12 @@ type LanguageProps = {
 };
 
 export const Language = styled.button<LanguageProps>`
+    padding: 0.5rem 1rem;
+
+    &:last-child {
+        margin-right: -1rem;
+    }
+
     ${({ isActive }) =>
         isActive
             ? {
@@ -22,8 +28,8 @@ export const Language = styled.button<LanguageProps>`
 `;
 
 export const Separator = styled.div`
-    height: 16px;
+    height: 1rem;
     width: 1px;
-    margin: auto 1.25rem;
+    margin: auto;
     background-color: ${theme.color.onBody.lowEmphasis};
 `;
