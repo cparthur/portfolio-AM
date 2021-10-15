@@ -7,6 +7,7 @@ declare module 'styled-components' {
             primary: {
                 start: string;
                 end?: string;
+                gradient?: string;
             };
             body: string;
             onBody: {
