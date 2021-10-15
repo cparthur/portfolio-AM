@@ -1,13 +1,15 @@
 import styled, { css } from 'styled-components';
 
+import { ThemeName } from 'styles/theme';
+
 type SwitchThemeProps = {
-    themeName: 'dark' | 'light';
+    themeName: ThemeName;
 };
 
 export const SwitchTheme = styled.button<SwitchThemeProps>`
     display: flex;
     align-items: center;
-    margin: 2.5rem 0 0 auto;
+    margin: 2rem 0 0 auto;
     width: 4.5rem;
     border-style: solid;
     border-width: 0.0625rem;
@@ -21,6 +23,7 @@ export const SwitchTheme = styled.button<SwitchThemeProps>`
     ${({ themeName }) =>
         themeName === 'dark'
             ? css`
+                  justify-content: flex-start;
                   border-color: ${({ theme }) => theme.color.primary.start};
 
                   & .icon {
@@ -28,6 +31,7 @@ export const SwitchTheme = styled.button<SwitchThemeProps>`
                   }
               `
             : css`
+                  justify-content: flex-end;
                   border-color: ${({ theme }) => theme.color.primary.start};
 
                   & .icon {
