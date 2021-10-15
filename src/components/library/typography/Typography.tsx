@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import theme from 'styles/theme';
 import { truncateMultipleLinesStyles, truncateOneLineStyles, TruncateTextProps } from './truncateText';
 
 type TypographyProps = {
@@ -14,7 +13,7 @@ type TypographyProps = {
 };
 
 const StyledTypography = styled.p<TruncateTextProps & TypographyProps>`
-    font-family: ${theme.typography.fonts};
+    font-family: ${({ theme }) => theme.typography.fonts};
     line-height: 1.33;
 
     & * {
@@ -50,7 +49,7 @@ const StyledTypography = styled.p<TruncateTextProps & TypographyProps>`
             font-weight: ${customWeight};
         `};
 
-    ${({ highlighted }) =>
+    ${({ highlighted, theme }) =>
         highlighted && {
             color: theme.color.primary.start,
         }};

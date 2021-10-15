@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import theme from 'styles/theme';
 
 export const SwitchLang = styled.div`
     display: flex;
@@ -17,7 +16,7 @@ export const Language = styled.button<LanguageProps>`
         margin-right: -1rem;
     }
 
-    ${({ isActive }) =>
+    ${({ isActive, theme }) =>
         isActive
             ? {
                   color: theme.color.primary.start,
@@ -31,5 +30,5 @@ export const Separator = styled.div`
     height: 1rem;
     width: 1px;
     margin: auto;
-    background-color: ${theme.color.onBody.lowEmphasis};
+    background-color: ${({ theme }) => theme.color.onBody.lowEmphasis};
 `;

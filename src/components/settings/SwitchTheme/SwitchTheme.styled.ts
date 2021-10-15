@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { ThemeName } from 'styles/theme';
+import { ThemeName } from 'styles/Theme/types';
 
 type SwitchThemeProps = {
     themeName: ThemeName;
@@ -21,7 +21,7 @@ export const SwitchTheme = styled.button<SwitchThemeProps>`
     }
 
     ${({ themeName }) =>
-        themeName === 'dark'
+        themeName === ThemeName.DARK
             ? css`
                   justify-content: flex-start;
                   border-color: ${({ theme }) => theme.color.primary.start};
