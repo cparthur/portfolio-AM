@@ -31,7 +31,7 @@ export const AboutContainer = styled.main`
 export const AboutText = styled(Typography)`
     font-size: 1.125rem;
     font-weight: 400;
-    line-height: 1.65;
+    line-height: 1.85rem;
     color: ${({ theme }) => theme.color.onBody.mediumEmphasis};
 `;
 
