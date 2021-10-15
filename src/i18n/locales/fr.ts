@@ -17,7 +17,7 @@ const en = {
             },
             myJourney: {
                 title: 'Parcours',
-                why: 'Je suis un designer qui a appris à coder pour faire le pont entre les créatifs et les développeurs.',
+                why: 'Je suis un designer qui a appris à coder pour faire le pont entre créatifs et développeurs.',
                 ecv: {
                     part1: 'Mon parcours a commencé à',
                     part2: ' où j’ai appris le design graphique et interactif.',
