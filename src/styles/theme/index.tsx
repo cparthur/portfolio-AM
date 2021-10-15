@@ -6,9 +6,9 @@ const dark = {
         primary: {
             start: '#26FF97',
         },
-        body: '#1A1A1A',
+        body: '#141414',
         onBody: {
-            highEmphasis: 'rgba(241, 241, 241, 1)',
+            highEmphasis: 'rgba(241, 241, 241, 0.95)',
             mediumEmphasis: 'rgba(241, 241, 241, 0.7)',
             lowEmphasis: 'rgba(241, 241, 241, 0.4)',
             placeholder: 'rgba(241, 241, 241, 0.2)',

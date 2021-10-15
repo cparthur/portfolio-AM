@@ -30,13 +30,14 @@ export const AboutContainer = styled.main`
 
 export const AboutText = styled(Typography)`
     font-size: 1.125rem;
-    font-weight: 300;
-    line-height: 1.5;
+    font-weight: 400;
+    line-height: 1.65;
+    color: ${({ theme }) => theme.color.onBody.mediumEmphasis};
 `;
 
 export const AboutSubtitle = styled(Typography)`
     margin: 4rem 0 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 
     ${media.desktop} {
         font-size: 1.625rem;
