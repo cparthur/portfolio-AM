@@ -4,7 +4,12 @@ import { DefaultTheme } from 'styled-components';
 import { baseTheme, darkTheme, lightTheme } from './themeData';
 import { ThemeName } from './types';
 
-const ThemeContext = React.createContext({} as any);
+interface ThemeContextTypes {
+    switchTheme: (themeName: ThemeName) => void;
+    theme: DefaultTheme;
+}
+
+const ThemeContext = React.createContext<ThemeContextTypes>({} as ThemeContextTypes);
 
 const ThemeStore: React.FC = ({ children }) => {
     const [theme, setTheme] = useState<DefaultTheme>({ ...baseTheme, ...darkTheme });
