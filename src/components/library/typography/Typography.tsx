@@ -13,6 +13,7 @@ type TypographyProps = {
 };
 
 const StyledTypography = styled.p<TruncateTextProps & TypographyProps>`
+    position: relative;
     font-family: ${({ theme }) => theme.typography.fonts};
     line-height: 1.33;
 
@@ -49,15 +50,40 @@ const StyledTypography = styled.p<TruncateTextProps & TypographyProps>`
             font-weight: ${customWeight};
         `};
 
-    ${({ highlighted, theme }) =>
-        highlighted && {
-            color: theme.color.primary.start,
-        }};
+    ${({ highlighted, theme }) => {
+        if (highlighted) {
+            if (theme.color.primary.gradient !== undefined) {
+                return css`
+                    color: ${theme.color.primary.start};
+                    background-image: ${theme.color.primary.gradient};
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                `;
+            }
 
-    ${({ isLink }) =>
-        isLink && {
-            textDecoration: 'underline',
-        }};
+            return css`
+                color: ${theme.color.primary.start};
+            `;
+        }
+
+        return null;
+    }}
+
+    ${({ isLink, theme }) =>
+        isLink &&
+        css`
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0.125rem;
+                height: 0.0625rem;
+                background: ${theme.color.primary.gradient !== undefined
+                    ? theme.color.primary.gradient
+                    : theme.color.primary.start};
+            }
+        `};
 
     ${({ truncateLines }) => (truncateLines === 1 ? truncateOneLineStyles : truncateMultipleLinesStyles(truncateLines))}
 `;

@@ -61,11 +61,12 @@ export const DefaultHeaderMenuItem = styled(Link)`
         &::after {
             content: '';
             position: absolute;
-            bottom: -0.25rem;
+            bottom: -0.125rem;
             left: 0;
             right: 0;
             height: 0.125rem;
-            background-color: ${({ theme }) => theme.color.primary.start};
+            background: ${({ theme }) =>
+                theme.color.primary.gradient !== undefined ? theme.color.primary.gradient : theme.color.primary.start};
         }
     }
 `;

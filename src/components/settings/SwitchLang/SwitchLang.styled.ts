@@ -5,25 +5,13 @@ export const SwitchLang = styled.div`
     align-items: center;
 `;
 
-type LanguageProps = {
-    isActive: boolean;
-};
-
-export const Language = styled.button<LanguageProps>`
+export const Language = styled.button`
     padding: 0.5rem 1rem;
+    color: ${({ theme }) => theme.color.onBody.lowEmphasis};
 
     &:last-child {
         margin-right: -1rem;
     }
-
-    ${({ isActive, theme }) =>
-        isActive
-            ? {
-                  color: theme.color.primary.start,
-              }
-            : {
-                  color: theme.color.onBody.lowEmphasis,
-              }}
 `;
 
 export const Separator = styled.div`

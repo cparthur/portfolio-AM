@@ -29,5 +29,8 @@ declare module 'styled-components' {
         typography: {
             fonts: string;
         };
+        transition: {
+            theme: string;
+        };
     }
 }

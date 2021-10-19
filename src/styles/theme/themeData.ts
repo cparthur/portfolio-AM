@@ -46,4 +46,7 @@ export const baseTheme = {
     typography: {
         fonts: '"Inter variable", -apple-system, "Helvetica Neue", "Arial", sans-serif',
     },
+    transition: {
+        theme: '300ms',
+    },
 };

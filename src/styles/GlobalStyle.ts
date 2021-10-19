@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
 import media from './media';
 import reset from './reset';
@@ -26,6 +26,8 @@ export default createGlobalStyle`
         scroll-behavior: smooth;
         background-color: ${({ theme }) => theme.color.body};
 
+        transition: ${({ theme }) => theme.transition.theme};
+
         ${media.infinite} {
             font-size: 0.7vw;
         }
@@ -34,7 +36,14 @@ export default createGlobalStyle`
     body {
         font-family: ${({ theme }) => theme.typography.fonts};
         color: ${({ theme }) => theme.color.onBody.highEmphasis};
-        background-color: ${({ theme }) => theme.color.body};
+    }
+
+    .icon-gradient {
+        ${({ theme }) =>
+            theme.name === 'light' &&
+            css`
+                fill: url('#svg-light-gradient') !important;
+            `}
     }
 
     /* SimpleBar custom properties */
