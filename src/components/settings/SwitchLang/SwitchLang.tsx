@@ -17,16 +17,12 @@ const SwitchLang = () => {
 
     return (
         <S.SwitchLang>
-            <S.Language onClick={() => handleChangeLang('en')}>
-                <Typography highlighted={lang === 'en'} weight={lang === 'en' ? 'extrabold' : 'medium'}>
-                    EN
-                </Typography>
+            <S.Language isActive={lang === 'en'} onClick={() => handleChangeLang('en')}>
+                <Typography weight={lang === 'en' ? 'extrabold' : 'medium'}>EN</Typography>
             </S.Language>
             <S.Separator />
-            <S.Language onClick={() => handleChangeLang('fr')}>
-                <Typography highlighted={lang === 'fr'} weight={lang === 'fr' ? 'extrabold' : 'medium'}>
-                    FR
-                </Typography>
+            <S.Language isActive={lang === 'fr'} onClick={() => handleChangeLang('fr')}>
+                <Typography weight={lang === 'fr' ? 'extrabold' : 'medium'}>FR</Typography>
             </S.Language>
         </S.SwitchLang>
     );

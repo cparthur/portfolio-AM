@@ -61,12 +61,11 @@ export const DefaultHeaderMenuItem = styled(Link)`
         &::after {
             content: '';
             position: absolute;
-            bottom: -0.125rem;
+            bottom: -0.25rem;
             left: 0;
             right: 0;
             height: 0.125rem;
-            background: ${({ theme }) =>
-                theme.color.primary.gradient !== undefined ? theme.color.primary.gradient : theme.color.primary.start};
+            background-color: ${({ theme }) => theme.color.primary.start};
         }
     }
 `;

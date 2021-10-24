@@ -38,7 +38,6 @@ export const AboutText = styled(Typography)`
 export const AboutSubtitle = styled(Typography)`
     margin: 4rem 0 1.5rem;
     font-size: 1.75rem;
-    color: ${({ theme }) => theme.color.onBody.lowEmphasis};
 
     ${media.desktop} {
         font-size: 1.625rem;
