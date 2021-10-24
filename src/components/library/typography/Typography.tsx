@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
+import { ThemeName } from 'styles/Theme/types';
 import { truncateMultipleLinesStyles, truncateOneLineStyles, TruncateTextProps } from './truncateText';
 
 type TypographyProps = {
@@ -52,7 +53,7 @@ const StyledTypography = styled.p<TruncateTextProps & TypographyProps>`
 
     ${({ highlighted, theme }) => {
         if (highlighted) {
-            if (theme.color.primary.gradient !== undefined) {
+            if (theme.name === ThemeName.LIGHT) {
                 return css`
                     color: ${theme.color.primary.start};
                     background-image: ${theme.color.primary.gradient};
@@ -79,9 +80,8 @@ const StyledTypography = styled.p<TruncateTextProps & TypographyProps>`
                 right: 0;
                 bottom: 0.125rem;
                 height: 0.0625rem;
-                background: ${theme.color.primary.gradient !== undefined
-                    ? theme.color.primary.gradient
-                    : theme.color.primary.start};
+                background: ${(theme.name === ThemeName.LIGHT && theme.color.primary.gradient) ||
+                (theme.name === ThemeName.DARK && theme.color.primary.start)};
             }
         `};
 

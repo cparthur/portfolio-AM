@@ -10,7 +10,7 @@ const SwitchTheme = () => {
     const { theme, switchTheme } = useContext(ThemeContext);
 
     const handleSwitchTheme = () => {
-        if (theme.name === ThemeName.DARK) {
+        if (theme === ThemeName.DARK) {
             switchTheme(ThemeName.LIGHT);
         } else {
             switchTheme(ThemeName.DARK);
@@ -18,8 +18,8 @@ const SwitchTheme = () => {
     };
 
     return (
-        <S.SwitchTheme onClick={handleSwitchTheme} themeName={theme.name}>
-            {theme.name === ThemeName.DARK ? <IconThemeDark /> : <IconThemeLight />}
+        <S.SwitchTheme onClick={handleSwitchTheme} themeName={theme}>
+            {theme === ThemeName.DARK ? <IconThemeDark /> : <IconThemeLight />}
         </S.SwitchTheme>
     );
 };

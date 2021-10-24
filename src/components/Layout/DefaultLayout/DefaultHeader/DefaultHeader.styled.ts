@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 import media from 'styles/media';
+import { ThemeName } from 'styles/Theme/types';
 
 export const DefaultHeaderContainer = styled.header`
     display: flex;
@@ -66,7 +67,8 @@ export const DefaultHeaderMenuItem = styled(Link)`
             right: 0;
             height: 0.125rem;
             background: ${({ theme }) =>
-                theme.color.primary.gradient !== undefined ? theme.color.primary.gradient : theme.color.primary.start};
+                (theme.name === ThemeName.LIGHT && theme.color.primary.gradient) ||
+                (theme.name === ThemeName.DARK && theme.color.primary.start)};
         }
     }
 `;

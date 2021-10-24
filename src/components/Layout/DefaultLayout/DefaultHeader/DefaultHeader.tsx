@@ -17,8 +17,8 @@ const DefaultHeader = () => {
     return (
         <S.DefaultHeaderContainer>
             <Link to="/" id="default-header-home-link">
-                {theme.name === ThemeName.DARK && <LogoDark />}
-                {theme.name === ThemeName.LIGHT && <LogoLight />}
+                {theme === ThemeName.DARK && <LogoDark />}
+                {theme === ThemeName.LIGHT && <LogoLight />}
             </Link>
             <S.DefaultHeaderMenu>
                 <S.DefaultHeaderMenuItem to="/about/" activeClassName="header-menu-item-active">
