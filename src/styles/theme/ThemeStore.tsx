@@ -14,7 +14,7 @@ function getInitialColorMode(): ThemeName {
     // query
     const mql = typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)');
     const hasMediaQueryPreference = mql && typeof mql.matches === 'boolean';
-    if (mql && hasMediaQueryPreference) {
+    if (hasMediaQueryPreference) {
         return mql.matches ? ThemeName.DARK : ThemeName.LIGHT;
     }
     // If they are using a browser/OS that doesn't support
