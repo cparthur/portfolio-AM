@@ -1,6 +1,5 @@
 import { DefaultTheme } from 'styled-components';
-
-import { ThemeName } from './ThemeStore';
+import { ThemeName } from './types';
 
 const themeData: DefaultTheme = {
     name: ThemeName.DARK,

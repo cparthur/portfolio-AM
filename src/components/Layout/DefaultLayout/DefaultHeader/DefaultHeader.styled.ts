@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 import media from 'styles/media';
-import { ThemeName } from 'styles/Theme/ThemeStore';
+import { ThemeName } from 'styles/Theme/types';
 
 export const DefaultHeaderContainer = styled.header`
     display: flex;

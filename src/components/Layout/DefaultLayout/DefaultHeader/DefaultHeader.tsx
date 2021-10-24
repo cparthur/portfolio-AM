@@ -5,7 +5,8 @@ import { useTranslation } from 'react-i18next';
 import LogoDark from 'library/logo/LogoDark';
 import LogoLight from 'library/logo/LogoLight';
 import Typography from 'library/typography/Typography';
-import { ThemeContext, ThemeName } from 'styles/Theme/ThemeStore';
+import { ThemeContext } from 'styles/Theme/ThemeStore';
+import { ThemeName } from 'styles/Theme/types';
 import * as S from './DefaultHeader.styled';
 
 const DefaultHeader = () => {

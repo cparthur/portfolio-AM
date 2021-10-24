@@ -2,7 +2,8 @@ import React, { useContext } from 'react';
 
 import IconThemeDark from 'library/icons/IconThemeDark';
 import IconThemeLight from 'library/icons/IconThemeLight';
-import { ThemeContext, ThemeName } from 'styles/Theme/ThemeStore';
+import { ThemeName } from 'styles/Theme/types';
+import { ThemeContext } from 'styles/Theme/ThemeStore';
 import * as S from './SwitchTheme.styled';
 
 const SwitchTheme = () => {
