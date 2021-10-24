@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-import { ThemeName } from './types';
+export enum ThemeName {
+    DARK = 'dark',
+    LIGHT = 'light',
+}
 
 function getInitialColorMode(): ThemeName {
     const persistedColorPreference = typeof window !== 'undefined' && window.localStorage.getItem('color-mode');

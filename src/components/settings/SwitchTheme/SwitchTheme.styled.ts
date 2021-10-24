@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { ThemeName } from 'styles/Theme/types';
+import { ThemeName } from 'styles/Theme/ThemeStore';
 
 type SwitchThemeProps = {
     themeName: ThemeName;

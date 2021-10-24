@@ -1,9 +1,6 @@
 import 'styled-components';
 
-export enum ThemeName {
-    DARK = 'dark',
-    LIGHT = 'light',
-}
+import { ThemeName } from './ThemeStore';
 
 declare module 'styled-components' {
     export interface DefaultTheme {

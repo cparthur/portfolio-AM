@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import { ThemeName } from 'styles/Theme/ThemeStore';
 
-import { ThemeName } from 'styles/Theme/types';
 import { truncateMultipleLinesStyles, truncateOneLineStyles, TruncateTextProps } from './truncateText';
 
 type TypographyProps = {
