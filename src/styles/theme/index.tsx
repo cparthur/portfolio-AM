@@ -1,7 +1,5 @@
 import { DefaultTheme } from 'styled-components';
 
-export type ThemeName = 'dark' | 'light';
-
 const dark = {
     theme: 'dark',
     color: {

@@ -7,7 +7,7 @@ import * as S from './DefaultFooterSettings.styled';
 const DefaultFooterSettings = () => (
     <S.Settings>
         <SwitchLang />
-        <SwitchTheme />
+        {/* <SwitchTheme /> */}
     </S.Settings>
 );
 
