@@ -5,7 +5,6 @@ import media from 'styles/media';
 export const DefaultFooterContainer = styled.footer`
     display: flex;
     margin: 5rem 0 2rem;
-    z-index: 0;
 
     ${media.tablet} {
         margin: 5rem 0 4rem;

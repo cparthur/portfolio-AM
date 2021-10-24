@@ -2,7 +2,7 @@ import React from 'react';
 
 const LogoDark = () => (
     <svg
-        className="logo logo-dark"
+        className="logo-dark"
         width="96"
         height="96"
         viewBox="0 0 96 96"
