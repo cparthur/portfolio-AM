@@ -1,13 +1,8 @@
 import 'styled-components';
 
-export enum ThemeName {
-    DARK = 'dark',
-    LIGHT = 'light',
-}
-
 declare module 'styled-components' {
     export interface DefaultTheme {
-        name: ThemeName;
+        theme: string;
         color: {
             primary: {
                 start: string;
