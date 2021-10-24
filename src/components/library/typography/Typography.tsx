@@ -14,8 +14,7 @@ type TypographyProps = {
 };
 
 const StyledTypography = styled.p<TruncateTextProps & TypographyProps>`
-    position: relative;
-    font-family: ${({ theme }) => theme.typography.fonts};
+    font-family: ${theme.typography.fonts};
     line-height: 1.33;
 
     & * {
@@ -51,39 +50,15 @@ const StyledTypography = styled.p<TruncateTextProps & TypographyProps>`
             font-weight: ${customWeight};
         `};
 
-    ${({ highlighted, theme }) => {
-        if (highlighted) {
-            if (theme.name === ThemeName.LIGHT) {
-                return css`
-                    color: ${theme.color.primary.start};
-                    background-image: ${theme.color.primary.gradient};
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                `;
-            }
+    ${({ highlighted }) =>
+        highlighted && {
+            color: theme.color.primary.start,
+        }};
 
-            return css`
-                color: ${theme.color.primary.start};
-            `;
-        }
-
-        return null;
-    }}
-
-    ${({ isLink, theme }) =>
-        isLink &&
-        css`
-            &:after {
-                content: '';
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 0.125rem;
-                height: 0.0625rem;
-                background: ${(theme.name === ThemeName.LIGHT && theme.color.primary.gradient) ||
-                (theme.name === ThemeName.DARK && theme.color.primary.start)};
-            }
-        `};
+    ${({ isLink }) =>
+        isLink && {
+            textDecoration: 'underline',
+        }};
 
     ${({ truncateLines }) => (truncateLines === 1 ? truncateOneLineStyles : truncateMultipleLinesStyles(truncateLines))}
 `;

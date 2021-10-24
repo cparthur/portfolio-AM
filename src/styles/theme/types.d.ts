@@ -1,10 +1,8 @@
 import 'styled-components';
 
-import { ThemeName } from './ThemeStore';
-
 declare module 'styled-components' {
     export interface DefaultTheme {
-        name: ThemeName;
+        theme: string;
         color: {
             primary: {
                 start: string;
@@ -25,9 +23,6 @@ declare module 'styled-components' {
         };
         typography: {
             fonts: string;
-        };
-        transition: {
-            theme: string;
         };
     }
 }

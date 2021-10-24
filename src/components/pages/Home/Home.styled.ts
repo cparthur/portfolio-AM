@@ -53,7 +53,7 @@ export const Separator = styled.div`
     height: 1px;
     width: 2rem;
     margin: 4rem 0;
-    background-color: ${({ theme }) => theme.color.onBody.lowEmphasis};
+    background-color: ${({ theme }) => theme.color.onBody.mediumEmphasis};
 
     ${media.tablet} {
         margin: 2.5rem 0;
