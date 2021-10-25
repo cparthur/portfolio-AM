@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 import media from 'styles/media';
+import { ThemeName } from 'styles/Theme/ThemeStore';
 
 export const DefaultHeaderContainer = styled.header`
     display: flex;
@@ -61,11 +62,13 @@ export const DefaultHeaderMenuItem = styled(Link)`
         &::after {
             content: '';
             position: absolute;
-            bottom: -0.25rem;
+            bottom: -0.125rem;
             left: 0;
             right: 0;
             height: 0.125rem;
-            background-color: ${({ theme }) => theme.color.primary.start};
+            background: ${({ theme }) =>
+                (theme.name === ThemeName.LIGHT && theme.color.primary.gradient) ||
+                (theme.name === ThemeName.DARK && theme.color.primary.start)};
         }
     }
 `;

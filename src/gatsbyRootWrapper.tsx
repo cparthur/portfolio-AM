@@ -4,12 +4,9 @@
  */
 import React from 'react';
 import { GatsbyBrowser } from 'gatsby';
-import { ThemeProvider } from 'styled-components';
-
-import theme from 'styles/theme';
 
 import './i18n/i18n';
 
-export const wrapRootElement: GatsbyBrowser['wrapRootElement'] = ({ element }) => (
-    <ThemeProvider theme={theme}>{element}</ThemeProvider>
-);
+import { ThemeStore } from 'styles/Theme/ThemeStore';
+
+export const wrapRootElement: GatsbyBrowser['wrapRootElement'] = ({ element }) => <ThemeStore>{element}</ThemeStore>;

@@ -2,12 +2,13 @@ import React from 'react';
 import { GatsbyBrowser } from 'gatsby';
 
 import SEO from 'components/SEO';
-import GlobalStyle from 'styles/GlobalStyle';
+import Theme from 'styles/Theme';
 
 export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({ element }) => (
     <>
-        <GlobalStyle />
-        <SEO />
-        {element}
+        <Theme>
+            <SEO />
+            {element}
+        </Theme>
     </>
 );
