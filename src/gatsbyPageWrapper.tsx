@@ -7,8 +7,8 @@ import GlobalStyle from 'styles/GlobalStyle';
 
 export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({ element }) => (
     <>
-        <GlobalStyle />
         <Theme>
+            <GlobalStyle />
             <SEO />
             {element}
         </Theme>
