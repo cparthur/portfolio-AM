@@ -1,9 +1,38 @@
 import React, { useEffect, useState } from 'react';
+import { DefaultTheme, ThemeProvider } from 'styled-components';
 
 export enum ThemeName {
     DARK = 'dark',
     LIGHT = 'light',
 }
+
+const themeData: DefaultTheme = {
+    name: ThemeName.DARK,
+    color: {
+        primary: {
+            start: 'var(--theme-colors-primary-start)',
+            end: 'var(--theme-colors-primary-end)',
+            gradient: 'var(--theme-colors-primary-gradient)',
+        },
+        body: 'var(--theme-colors-body)',
+        onBody: {
+            highEmphasis: 'var(--theme-colors-onBody-highEmphasis)',
+            mediumEmphasis: 'var(--theme-colors-onBody-mediumEmphasis)',
+            lowEmphasis: 'var(--theme-colors-onBody-lowEmphasis)',
+            placeholder: 'var(--theme-colors-onBody-placeholder)',
+        },
+    },
+    shadow: {
+        default: 'var(--theme-shadow-default)',
+        large: 'var(--theme-shadow-large)',
+    },
+    typography: {
+        fonts: '"Inter variable", -apple-system, "Helvetica Neue", "Arial", sans-serif',
+    },
+    transition: {
+        theme: '300ms',
+    },
+};
 
 function getInitialColorMode(): ThemeName {
     const persistedColorPreference = typeof window !== 'undefined' && window.localStorage.getItem('color-mode');
@@ -53,7 +82,11 @@ const ThemeStore: React.FC = ({ children }) => {
         window.localStorage.setItem('color-mode', themeName);
     };
 
-    return <ThemeContext.Provider value={{ switchTheme, theme }}>{children}</ThemeContext.Provider>;
+    return (
+        <ThemeContext.Provider value={{ switchTheme, theme }}>
+            <ThemeProvider theme={{ ...themeData, name: theme }}>{children}</ThemeProvider>
+        </ThemeContext.Provider>
+    );
 };
 
 export { ThemeStore, ThemeContext };
