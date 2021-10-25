@@ -1,7 +1,6 @@
 import React, { useContext, useMemo } from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import GlobalStyle from 'styles/GlobalStyle';
 import SvgLightGradient from './SvgLightGradient';
 import { ThemeContext } from './ThemeStore';
 import themeData from './themeData';
@@ -14,7 +13,6 @@ const Theme: React.FC = ({ children }) => {
     return (
         <ThemeProvider theme={renderedTheme}>
             {theme === 'light' && <SvgLightGradient />}
-            <GlobalStyle />
             {children}
         </ThemeProvider>
     );
