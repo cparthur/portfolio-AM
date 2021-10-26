@@ -6,7 +6,7 @@ type SwitchThemeProps = {
     themeName: ThemeName;
 };
 
-export const SwitchThemePlaceholder = styled.div`
+export const SwitchThemePlaceholder = styled.button`
     margin: 2rem 0 0 auto;
     height: 2rem;
     width: 4.5rem;
