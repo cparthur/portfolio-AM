@@ -4,7 +4,7 @@ import { ThemeName } from './ThemeStore';
 
 declare module 'styled-components' {
     export interface DefaultTheme {
-        name: ThemeName;
+        name?: ThemeName;
         color: {
             primary: {
                 start: string;

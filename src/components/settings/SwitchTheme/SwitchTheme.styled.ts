@@ -6,19 +6,25 @@ type SwitchThemeProps = {
     themeName: ThemeName;
 };
 
-export const SwitchTheme = styled.button<SwitchThemeProps>`
-    position: relative;
-    display: flex;
-    align-items: center;
+export const SwitchThemePlaceholder = styled.div`
     margin: 2rem 0 0 auto;
+    height: 2rem;
     width: 4.5rem;
     border-style: solid;
     border-width: 1px;
     border-radius: 2rem;
+    border-color: ${({ theme }) => theme.color.onBody.placeholder};
+`;
+
+export const SwitchTheme = styled(SwitchThemePlaceholder)<SwitchThemeProps>`
+    position: relative;
+    display: flex;
+    align-items: center;
 
     & .icon {
         width: 2rem;
         height: 2rem;
+        fill: ${({ theme }) => theme.color.primary.start};
     }
 
     ${({ themeName }) =>
@@ -26,10 +32,6 @@ export const SwitchTheme = styled.button<SwitchThemeProps>`
             ? css`
                   justify-content: flex-start;
                   border-color: ${({ theme }) => theme.color.primary.start};
-
-                  & .icon {
-                      fill: ${({ theme }) => theme.color.primary.start};
-                  }
               `
             : css`
                   justify-content: flex-end;
@@ -49,10 +51,6 @@ export const SwitchTheme = styled.button<SwitchThemeProps>`
                       border-radius: inherit;
                       background: ${({ theme }) => theme.color.primary.gradient};
                       z-index: -1;
-                  }
-
-                  & .icon {
-                      fill: ${({ theme }) => theme.color.primary.start};
                   }
               `}
 `;

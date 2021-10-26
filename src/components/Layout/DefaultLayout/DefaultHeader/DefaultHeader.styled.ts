@@ -25,12 +25,14 @@ export const DefaultHeaderContainer = styled.header`
 
     & #default-header-home-link {
         display: flex;
+        width: 6rem;
+        height: 6rem;
         pointer-events: initial;
     }
 
     & .logo-dark {
-        width: 6rem;
-        height: 6rem;
+        width: 100%;
+        height: 100%;
         margin-right: auto;
 
         ${media.desktop} {

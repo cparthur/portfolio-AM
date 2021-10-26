@@ -16,6 +16,10 @@ const SwitchTheme = () => {
         }
     };
 
+    if (!theme) {
+        return <S.SwitchThemePlaceholder />;
+    }
+
     return (
         <S.SwitchTheme onClick={handleSwitchTheme} themeName={theme}>
             {theme === ThemeName.DARK ? <IconThemeDark /> : <IconThemeLight />}

@@ -7,6 +7,4 @@ import { GatsbyBrowser } from 'gatsby';
 
 import './i18n/i18n';
 
-import { ThemeStore } from 'styles/Theme/ThemeStore';
-
-export const wrapRootElement: GatsbyBrowser['wrapRootElement'] = ({ element }) => <ThemeStore>{element}</ThemeStore>;
+export const wrapRootElement: GatsbyBrowser['wrapRootElement'] = ({ element }) => <>{element}</>;

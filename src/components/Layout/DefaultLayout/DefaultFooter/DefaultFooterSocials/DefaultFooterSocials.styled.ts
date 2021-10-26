@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { ThemeName } from 'styles/Theme/ThemeStore';
+
 export const Socials = styled.div`
     margin-right: auto;
     pointer-events: initial;
@@ -15,7 +17,7 @@ export const Social = styled.a`
     }
 
     & .icon {
-        fill: ${({ theme }) => theme.color.onBody.highEmphasis};
+        fill: ${({ theme }) => theme.name === ThemeName.DARK && theme.color.onBody.highEmphasis};
         margin-right: 0.5rem;
     }
 
