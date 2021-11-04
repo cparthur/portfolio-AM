@@ -3,6 +3,7 @@
  * You can also use only FacebookSEO or TwitterSEO to only override the one you want.
  */
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { useLocation } from '@reach/router';
 import { useStaticQuery, graphql } from 'gatsby';
@@ -19,9 +20,9 @@ export interface SEOProps {
 const SEO: React.FC<SEOProps> = ({ title = null, description = null, image = null, article = false }) => {
     const { pathname } = useLocation();
     const { site } = useStaticQuery(query);
+    const { i18n } = useTranslation();
 
-    const { siteUrl, titleTemplate, defaultTitle, defaultDescription, defaultImage, author, siteLanguage } =
-        site.siteMetadata;
+    const { siteUrl, titleTemplate, defaultTitle, defaultDescription, defaultImage, author } = site.siteMetadata;
 
     const seo = {
         title: title || defaultTitle,
@@ -34,7 +35,7 @@ const SEO: React.FC<SEOProps> = ({ title = null, description = null, image = nul
     return (
         <>
             <Helmet title={seo.title} titleTemplate={titleTemplate}>
-                <html lang={siteLanguage} />
+                <html lang={i18n.resolvedLanguage} />
                 <meta name="author" content={seo.author} />
                 <meta name="description" content={seo.description} />
                 <meta name="image" content={seo.image} />
@@ -63,7 +64,6 @@ const query = graphql`
                 defaultDescription: description
                 defaultImage: logo
                 author
-                siteLanguage
             }
         }
     }

@@ -19,6 +19,7 @@ i18n
             fr,
         },
         fallbackLng: ['en', 'fr'],
+        preload: ['en', 'fr'],
         debug: false,
 
         interpolation: {

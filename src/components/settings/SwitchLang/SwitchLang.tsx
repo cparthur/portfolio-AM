@@ -1,17 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Typography from 'library/typography/Typography';
 import * as S from './SwitchLang.styled';
 
-const SwitchLang = () => {
+const SwitchLang: React.FC = () => {
     const { i18n } = useTranslation();
     const { language } = i18n;
 
-    const [lang, setLang] = useState(language);
+    const [lang, setLang] = useState<string | undefined>(undefined);
+
+    useEffect(() => {
+        const value = language.split('-')[0];
+        if (value === 'en' || value === 'fr') {
+            setLang(value);
+        } else {
+            setLang('en');
+        }
+    }, [language]);
 
     const handleChangeLang = (newLang: string) => {
-        setLang(newLang);
         i18n.changeLanguage(newLang);
     };
 
